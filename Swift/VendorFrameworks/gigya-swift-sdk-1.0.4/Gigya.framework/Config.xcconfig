@@ -1,0 +1,12 @@
+//
+//  Config.xcconfig
+//  GigyaSwift
+//
+//  Created by Shmuel, Sagi on 25/02/2019.
+//  Copyright © 2019 Gigya. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+SWIFT_INCLUDE_PATHS = $(SRCROOT)/GigyaSwift
+MODULEMAP_PRIVATE_FILE = $(SRCROOT)/GigyaSwift/module.modulemap
