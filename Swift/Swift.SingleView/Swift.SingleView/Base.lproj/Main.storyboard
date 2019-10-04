@@ -15,16 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWl-WL-CYn">
-                                <rect key="frame" x="184" y="554" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="YUB-Hu-gMJ"/>
-                                    <constraint firstAttribute="height" constant="30" id="s9X-gL-i4e"/>
-                                </constraints>
-                                <state key="normal" title="Login"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initializing..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWG-BC-7fY">
-                                <rect key="frame" x="0.0" y="352" width="414" height="192"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select action..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWG-BC-7fY">
+                                <rect key="frame" x="124" y="352" width="166.5" height="192"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="192" id="WWC-7O-SrJ"/>
                                 </constraints>
@@ -32,20 +24,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWl-WL-CYn">
+                                <rect key="frame" x="148.5" y="554" width="117" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="AA0-g4-KKq"/>
+                                </constraints>
+                                <state key="normal" title="Login With Gigya"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DH3-Rg-iuZ">
+                                <rect key="frame" x="111" y="590" width="192" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6w5-aE-QzE"/>
+                                </constraints>
+                                <state key="normal" title="Login With FrameworkProxy"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="PWl-WL-CYn" firstAttribute="top" secondItem="VWG-BC-7fY" secondAttribute="bottom" constant="10" id="MaV-yU-FCI"/>
-                            <constraint firstItem="VWG-BC-7fY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nrp-gD-ief"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VWG-BC-7fY" secondAttribute="trailing" id="SNI-fO-gVd"/>
+                            <constraint firstItem="VWG-BC-7fY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nrp-gD-ief"/>
+                            <constraint firstItem="DH3-Rg-iuZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qci-7i-50a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VWG-BC-7fY" secondAttribute="trailing" id="SNI-fO-gVd"/>
                             <constraint firstItem="PWl-WL-CYn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TmG-Rr-B2k"/>
+                            <constraint firstItem="PWl-WL-CYn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i5n-UD-9hA"/>
                             <constraint firstItem="VWG-BC-7fY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rYE-Fc-FtV"/>
                             <constraint firstItem="VWG-BC-7fY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t7N-mN-ZKx"/>
+                            <constraint firstItem="DH3-Rg-iuZ" firstAttribute="top" secondItem="PWl-WL-CYn" secondAttribute="bottom" constant="6" id="w7g-oD-5jB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="btnLogin" destination="PWl-WL-CYn" id="e1G-Rh-FuP"/>
+                        <outlet property="btnLoginWithGigya" destination="PWl-WL-CYn" id="ScQ-wn-hHx"/>
+                        <outlet property="btnLoginWithProxy" destination="DH3-Rg-iuZ" id="xq6-Kj-x2X"/>
                         <outlet property="lblMessage" destination="VWG-BC-7fY" id="F9h-f2-SA7"/>
                     </connections>
                 </viewController>

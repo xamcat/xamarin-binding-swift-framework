@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53A544012347F90E00F7694A /* Gigya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 534612882347F3C500E80C5C /* Gigya.framework */; };
+		53A544022347F90E00F7694A /* Gigya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 534612882347F3C500E80C5C /* Gigya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		53C74C282347ECC6003AF4C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C74C272347ECC6003AF4C6 /* AppDelegate.swift */; };
 		53C74C2A2347ECC6003AF4C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C74C292347ECC6003AF4C6 /* SceneDelegate.swift */; };
 		53C74C2C2347ECC6003AF4C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C74C2B2347ECC6003AF4C6 /* ViewController.swift */; };
@@ -16,12 +18,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		53C74C3F2347EF6A003AF4C6 /* Embed Frameworks */ = {
+		53ABCBAE2347F1000003F113 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				53A544022347F90E00F7694A /* Gigya.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -29,6 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		534612882347F3C500E80C5C /* Gigya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gigya.framework; path = "../VendorFrameworks/gigya-swift-sdk-1.0.4/Gigya.framework"; sourceTree = "<group>"; };
 		53C74C242347ECC6003AF4C6 /* Swift.SingleView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift.SingleView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C74C272347ECC6003AF4C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53C74C292347ECC6003AF4C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,17 +48,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53A544012347F90E00F7694A /* Gigya.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53ABCBA52347F0CB0003F113 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				534612882347F3C500E80C5C /* Gigya.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		53C74C1B2347ECC6003AF4C6 = {
 			isa = PBXGroup;
 			children = (
 				53C74C262347ECC6003AF4C6 /* Swift.SingleView */,
 				53C74C252347ECC6003AF4C6 /* Products */,
+				53ABCBA52347F0CB0003F113 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,7 +104,7 @@
 				53C74C202347ECC6003AF4C6 /* Sources */,
 				53C74C212347ECC6003AF4C6 /* Frameworks */,
 				53C74C222347ECC6003AF4C6 /* Resources */,
-				53C74C3F2347EF6A003AF4C6 /* Embed Frameworks */,
+				53ABCBAE2347F1000003F113 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -301,6 +315,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YN8QB992XW;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../**";
 				INFOPLIST_FILE = Swift.SingleView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -320,6 +335,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YN8QB992XW;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../**";
 				INFOPLIST_FILE = Swift.SingleView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

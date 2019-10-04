@@ -7,26 +7,38 @@
 //
 
 import UIKit
+import Gigya
 
 class ViewController: UIViewController {
 
     @IBOutlet weak var lblMessage: UILabel!
-    @IBOutlet weak var btnLogin: UIButton!
+    @IBOutlet weak var btnLoginWithGigya: UIButton!
+    @IBOutlet weak var btnLoginWithProxy: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//       btnLogin.TouchUpInside += btnLogin_Tap;
-//                 _proxy = new SwiftFrameworkProxy();
-//                 var result = _proxy.InitFor("APIKey");
-//                 System.Diagnostics.Debug.WriteLine(result);
-//                 lblMessage.Text = result;  }
-
+        btnLoginWithGigya.addTarget(self, action: #selector(self.btnLoginWithGigya_Tap), for: .touchUpInside)
+        btnLoginWithProxy.addTarget(self, action: #selector(self.btnLoginWithProxy_Tap), for: .touchUpInside)
       }
 
-//      private void btnLogin_Tap(object sender, EventArgs e)
-//      {
-//          _proxy.Login(this);
-//      }
+    @objc func btnLoginWithGigya_Tap(sender: UIButton!) {
+        // init
+        Gigya.sharedInstance().initFor(apiKey: "APIKey");
+        let gigyaDomain = Gigya.sharedInstance().config.apiDomain
+        let result = "!!! Gigya initialized with domain: \(gigyaDomain)"
+        lblMessage.text = result;
+        
+        // activate login
+        Gigya.sharedInstance().login(
+                   with: GigyaSocialProviders.google,
+                   viewController: self,
+                   completion: { _ in
+                       // Gigya.login.completed
+                   })
+    }
+    
+    @objc func btnLoginWithProxy_Tap(sender: UIButton!) {
+        // TODO: implement
+      }
 }
 
