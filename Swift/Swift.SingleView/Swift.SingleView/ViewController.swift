@@ -8,6 +8,7 @@
 
 import UIKit
 import Gigya
+import SwiftFrameworkProxy
 
 class ViewController: UIViewController {
 
@@ -38,7 +39,10 @@ class ViewController: UIViewController {
     }
     
     @objc func btnLoginWithProxy_Tap(sender: UIButton!) {
-        // TODO: implement
+        let proxy = SwiftFrameworkProxy()
+        let result = proxy.initFor(apiKey: "APIKey")
+        lblMessage.text = result;
+        proxy.login(controller: self);
       }
 }
 

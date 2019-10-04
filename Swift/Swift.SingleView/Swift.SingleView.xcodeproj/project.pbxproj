@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		53A544012347F90E00F7694A /* Gigya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 534612882347F3C500E80C5C /* Gigya.framework */; };
 		53A544022347F90E00F7694A /* Gigya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 534612882347F3C500E80C5C /* Gigya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		53A544042347F99B00F7694A /* SwiftFrameworkProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A544032347F99B00F7694A /* SwiftFrameworkProxy.framework */; };
+		53A544052347F99B00F7694A /* SwiftFrameworkProxy.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 53A544032347F99B00F7694A /* SwiftFrameworkProxy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		53C74C282347ECC6003AF4C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C74C272347ECC6003AF4C6 /* AppDelegate.swift */; };
 		53C74C2A2347ECC6003AF4C6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C74C292347ECC6003AF4C6 /* SceneDelegate.swift */; };
 		53C74C2C2347ECC6003AF4C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C74C2B2347ECC6003AF4C6 /* ViewController.swift */; };
@@ -24,6 +26,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				53A544052347F99B00F7694A /* SwiftFrameworkProxy.framework in Embed Frameworks */,
 				53A544022347F90E00F7694A /* Gigya.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -33,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		534612882347F3C500E80C5C /* Gigya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gigya.framework; path = "../VendorFrameworks/gigya-swift-sdk-1.0.4/Gigya.framework"; sourceTree = "<group>"; };
+		53A544032347F99B00F7694A /* SwiftFrameworkProxy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftFrameworkProxy.framework; path = "../VendorFrameworks/swift-framework-proxy/SwiftFrameworkProxy.framework"; sourceTree = "<group>"; };
 		53C74C242347ECC6003AF4C6 /* Swift.SingleView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift.SingleView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C74C272347ECC6003AF4C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53C74C292347ECC6003AF4C6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53A544042347F99B00F7694A /* SwiftFrameworkProxy.framework in Frameworks */,
 				53A544012347F90E00F7694A /* Gigya.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -58,6 +63,7 @@
 		53ABCBA52347F0CB0003F113 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				53A544032347F99B00F7694A /* SwiftFrameworkProxy.framework */,
 				534612882347F3C500E80C5C /* Gigya.framework */,
 			);
 			name = Frameworks;
