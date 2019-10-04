@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "container:">
+   </FileRef>
+   <Group
+      location = "group:../../VendorFrameworks/gigya-swift-sdk-1.0.4/Gigya.framework"
+      name = "Gigya.framework">
+      <FileRef
+         location = "group:Gigya">
+      </FileRef>
+      <FileRef
+         location = "group:Config.xcconfig">
+      </FileRef>
+      <Group
+         location = "group:Headers"
+         name = "Headers">
+         <FileRef
+            location = "group:GigyaSwift.h">
+         </FileRef>
+         <FileRef
+            location = "group:Gigya-Swift.h">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:Modules"
+         name = "Modules">
+         <Group
+            location = "group:Gigya.swiftmodule"
+            name = "Gigya.swiftmodule">
+            <FileRef
+               location = "group:arm64-apple-ios.swiftdoc">
+            </FileRef>
+            <FileRef
+               location = "group:i386.swiftmodule">
+            </FileRef>
+            <FileRef
+               location = "group:x86_64-apple-ios-simulator.swiftdoc">
+            </FileRef>
+            <FileRef
+               location = "group:x86_64-apple-ios-simulator.swiftmodule">
+            </FileRef>
+            <FileRef
+               location = "group:x86_64.swiftdoc">
+            </FileRef>
+            <FileRef
+               location = "group:arm64.swiftmodule">
+            </FileRef>
+            <FileRef
+               location = "group:x86_64.swiftmodule">
+            </FileRef>
+            <FileRef
+               location = "group:arm.swiftdoc">
+            </FileRef>
+            <FileRef
+               location = "group:armv7-apple-ios.swiftmodule">
+            </FileRef>
+            <FileRef
+               location = "group:i386-apple-ios-simulator.swiftmodule">
+            </FileRef>
+            <FileRef
+               location = "group:i386.swiftdoc">
+            </FileRef>
+            <FileRef
+               location = "group:arm64-apple-ios.swiftmodule">
+            </FileRef>
+            <FileRef
+               location = "group:arm.swiftmodule">
+            </FileRef>
+            <FileRef
+               location = "group:armv7.swiftdoc">
+            </FileRef>
+            <FileRef
+               location = "group:arm64.swiftdoc">
+            </FileRef>
+            <FileRef
+               location = "group:armv7-apple-ios.swiftdoc">
+            </FileRef>
+            <FileRef
+               location = "group:i386-apple-ios-simulator.swiftdoc">
+            </FileRef>
+            <FileRef
+               location = "group:armv7.swiftmodule">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:module.modulemap">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:Info.plist">
+      </FileRef>
+   </Group>
+</Workspace>
