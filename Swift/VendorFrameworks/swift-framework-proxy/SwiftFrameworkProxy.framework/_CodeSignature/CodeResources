@@ -14,23 +14,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		MMZze/N/6RUnyyxwYAkqvZ7kZkI=
+		nXVZpMFDfjnFEc5i9Y+BOAyQ2pU=
 		</data>
-		<key>Modules/SwiftFrameworkProxy.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<key>Modules/SwiftFrameworkProxy.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		6w9JQ6jfomY5TLnBEvOL0KLv0dw=
+		+aBW3OnZ2CN7NEhBi6jV3YNFLwQ=
 		</data>
-		<key>Modules/SwiftFrameworkProxy.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
+		<key>Modules/SwiftFrameworkProxy.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		NnOg9hRM/93vsk4wHF0FNtyWzS4=
+		gffp286zdkDKmGqPCt37BRoCBfc=
 		</data>
-		<key>Modules/SwiftFrameworkProxy.swiftmodule/x86_64.swiftdoc</key>
+		<key>Modules/SwiftFrameworkProxy.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		6w9JQ6jfomY5TLnBEvOL0KLv0dw=
+		+aBW3OnZ2CN7NEhBi6jV3YNFLwQ=
 		</data>
-		<key>Modules/SwiftFrameworkProxy.swiftmodule/x86_64.swiftmodule</key>
+		<key>Modules/SwiftFrameworkProxy.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		NnOg9hRM/93vsk4wHF0FNtyWzS4=
+		gffp286zdkDKmGqPCt37BRoCBfc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -53,32 +53,32 @@
 			SvBCLGF17dlqMmoTas8Eh7Ql6r3unuCyPvnjSBtOzlw=
 			</data>
 		</dict>
-		<key>Modules/SwiftFrameworkProxy.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
+		<key>Modules/SwiftFrameworkProxy.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FrYVTpn+LI9S8LYJCfs0NtBWIJz19yxq4UEm6MLNmpY=
+			Dj3b+IfXXhQi+kY+4U01pNegrumAVSkwA5oxBu2MiIk=
 			</data>
 		</dict>
-		<key>Modules/SwiftFrameworkProxy.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
+		<key>Modules/SwiftFrameworkProxy.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XNZSTjPDSyPyU0DXQE+tETGV3PSNfaVOpsECdxIrjAc=
+			VmiAnFkSZ3hgWhgHmiNpNHNBK4AhvY+PRHOKZ1vz3/M=
 			</data>
 		</dict>
-		<key>Modules/SwiftFrameworkProxy.swiftmodule/x86_64.swiftdoc</key>
+		<key>Modules/SwiftFrameworkProxy.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FrYVTpn+LI9S8LYJCfs0NtBWIJz19yxq4UEm6MLNmpY=
+			Dj3b+IfXXhQi+kY+4U01pNegrumAVSkwA5oxBu2MiIk=
 			</data>
 		</dict>
-		<key>Modules/SwiftFrameworkProxy.swiftmodule/x86_64.swiftmodule</key>
+		<key>Modules/SwiftFrameworkProxy.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XNZSTjPDSyPyU0DXQE+tETGV3PSNfaVOpsECdxIrjAc=
+			VmiAnFkSZ3hgWhgHmiNpNHNBK4AhvY+PRHOKZ1vz3/M=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
