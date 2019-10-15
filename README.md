@@ -19,7 +19,7 @@ By default the framework is built for a selected configuration only. If you pack
 In order to build a fat framework, please run from the root of the repo the following script, which automates all the manual steps fot you
 
 ```bash
-./Swift/Scrips/build.fat.sh
+./Swift/Scripts/build.fat.sh
 ```
 
 The output fat framework will be stored at the `Swift/VendorFrameworks/swift-framework-proxy/SwiftProxyFramework.framework`. The same file path is used at the Xamarin.iOS Binding project to package the Xamarin binding library:
