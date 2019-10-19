@@ -12,8 +12,8 @@ namespace Binding
 		[Export ("initForApiKey:")]
 		string InitForApiKey (string apiKey);
 
-		// -(void)loginWith:(enum GigyaSocialProvidersProxy)provider viewController:(UIViewController * _Nonnull)viewController;
-		[Export ("loginWith:viewController:")]
-		void LoginWith (GigyaSocialProvidersProxy provider, UIViewController viewController);
+		// -(void)loginWithProvider:(enum GigyaSocialProvidersProxy)provider viewController:(UIViewController * _Nonnull)viewController;
+		[Export ("loginWithProvider:viewController:")]
+		void LoginWithProvider (GigyaSocialProvidersProxy provider, UIViewController viewController);
 	}
 }

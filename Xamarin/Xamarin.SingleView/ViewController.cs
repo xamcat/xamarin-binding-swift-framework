@@ -26,7 +26,7 @@ namespace Xamarin.SingleView
 
         private void btnLogin_Tap(object sender, EventArgs e)
         {
-            _proxy.LoginWith(GigyaSocialProvidersProxy.Google, this);
+            _proxy.LoginWithProvider(GigyaSocialProvidersProxy.Google, this);
         }
     }
 }

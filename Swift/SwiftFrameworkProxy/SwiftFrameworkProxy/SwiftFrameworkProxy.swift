@@ -21,10 +21,13 @@ public class SwiftFrameworkProxy : NSObject {
         return result
     }
     
-    //with provider: Gigya.GigyaSocialProviders, viewController: UIViewController, params: [String : Any] = [:], completion: @escaping (Gigya.GigyaLoginResult<T>) -> Void
+    //public func login(with provider: Gigya.GigyaSocialProviders, viewController: UIViewController, params: [String : Any] = [:], completion: @escaping (Gigya.GigyaLoginResult<T>) -> Void)
     @objc
-    public func login(with provider: GigyaSocialProvidersProxy, viewController: UIViewController) {
+    public func login(provider: GigyaSocialProvidersProxy, viewController: UIViewController) {
 
+        // 1. don't use `with` keyword because it's translated to objC which couldn't be understand out of the box by the sharpie
+        // 2. have to re-created all non Int based enum because others couldn't be translated to ObjC automatically
+        
         Gigya.sharedInstance().login(
             with: provider.toGigyaSocialProviders(),
             viewController: viewController,

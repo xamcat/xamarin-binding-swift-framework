@@ -32,6 +32,6 @@ echo "Generating binding api definition and structs"
 sharpie bind --sdk=iphoneos$IOS_SDK_VERSION --output="$SWIFT_OUTPUT_PATH/XamarinApiDef" --namespace="Binding" --scope="$SWIFT_OUTPUT_PATH/$SWIFT_PROJECT_NAME.framework/Headers/" "$SWIFT_OUTPUT_PATH/$SWIFT_PROJECT_NAME.framework/Headers/$SWIFT_PROJECT_NAME-Swift.h"
 
 echo "Replace existing metadata with the udpated"
-cp -Rf "$SWIFT_OUTPUT_PATH/XamarinApiDef/*" "$XAMARIN_BINDING_PATH/"
+cp -Rf "$SWIFT_OUTPUT_PATH/XamarinApiDef/." "$XAMARIN_BINDING_PATH/"
 
 echo "Done!"
