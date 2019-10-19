@@ -199,12 +199,20 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
+typedef SWIFT_ENUM(NSInteger, GigyaSocialProvidersProxy, closed) {
+  GigyaSocialProvidersProxyFacebook = 0,
+  GigyaSocialProvidersProxyGoogle = 1,
+  GigyaSocialProvidersProxyApple = 2,
+  GigyaSocialProvidersProxyTwitter = 3,
+  GigyaSocialProvidersProxyYahoo = 4,
+};
+
 @class UIViewController;
 
 SWIFT_CLASS_NAMED("SwiftFrameworkProxy")
 @interface SwiftFrameworkProxy : NSObject
 - (NSString * _Nonnull)initForApiKey:(NSString * _Nonnull)apiKey SWIFT_METHOD_FAMILY(none) SWIFT_WARN_UNUSED_RESULT;
-- (void)loginWithController:(UIViewController * _Nonnull)controller;
+- (void)loginWith:(enum GigyaSocialProvidersProxy)provider viewController:(UIViewController * _Nonnull)viewController;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
