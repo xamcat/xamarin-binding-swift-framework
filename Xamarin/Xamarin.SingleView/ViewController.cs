@@ -19,14 +19,14 @@ namespace Xamarin.SingleView
 
             btnLogin.TouchUpInside += btnLogin_Tap;
             _proxy = new SwiftFrameworkProxy();
-            var result = _proxy.InitFor("APIKey");
+            var result = _proxy.InitForApiKey("APIKey");
             System.Diagnostics.Debug.WriteLine(result);
             lblMessage.Text = result;
         }
 
         private void btnLogin_Tap(object sender, EventArgs e)
         {
-            _proxy.Login(this);
+            _proxy.LoginWith(GigyaSocialProvidersProxy.Google, this);
         }
     }
 }
