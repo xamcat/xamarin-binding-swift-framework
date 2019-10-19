@@ -21,11 +21,13 @@ public class SwiftFrameworkProxy : NSObject {
         return result
     }
     
+    //with provider: Gigya.GigyaSocialProviders, viewController: UIViewController, params: [String : Any] = [:], completion: @escaping (Gigya.GigyaLoginResult<T>) -> Void
     @objc
-    public func login(controller: UIViewController) {
+    public func login(with provider: GigyaSocialProvidersProxy, viewController: UIViewController) {
+
         Gigya.sharedInstance().login(
-            with: GigyaSocialProviders.google,
-            viewController: controller,
+            with: provider.toGigyaSocialProviders(),
+            viewController: viewController,
             completion: { _ in
                 // Gigya.login.completed
             })

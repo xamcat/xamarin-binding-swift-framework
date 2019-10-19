@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		53069FBE2347E08A00663A24 /* SwiftFrameworkProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 53069FBC2347E08A00663A24 /* SwiftFrameworkProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		53069FC52347E0AD00663A24 /* SwiftFrameworkProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53069FC42347E0AD00663A24 /* SwiftFrameworkProxy.swift */; };
+		537EADED235913200023A666 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537EADEC235913200023A666 /* Structs.swift */; };
 		53C74C1A2347E3CB003AF4C6 /* Gigya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53C74C192347E3CB003AF4C6 /* Gigya.framework */; };
 /* End PBXBuildFile section */
 
@@ -17,6 +18,7 @@
 		53069FBC2347E08A00663A24 /* SwiftFrameworkProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftFrameworkProxy.h; sourceTree = "<group>"; };
 		53069FBD2347E08A00663A24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53069FC42347E0AD00663A24 /* SwiftFrameworkProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFrameworkProxy.swift; sourceTree = "<group>"; };
+		537EADEC235913200023A666 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		53C74C192347E3CB003AF4C6 /* Gigya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gigya.framework; path = "../VendorFrameworks/gigya-swift-sdk-1.0.4/Gigya.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +57,7 @@
 				53069FBC2347E08A00663A24 /* SwiftFrameworkProxy.h */,
 				53069FBD2347E08A00663A24 /* Info.plist */,
 				53069FC42347E0AD00663A24 /* SwiftFrameworkProxy.swift */,
+				537EADEC235913200023A666 /* Structs.swift */,
 			);
 			path = SwiftFrameworkProxy;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				537EADED235913200023A666 /* Structs.swift in Sources */,
 				53069FC52347E0AD00663A24 /* SwiftFrameworkProxy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
