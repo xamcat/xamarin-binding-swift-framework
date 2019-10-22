@@ -199,20 +199,57 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 # pragma pop_macro("any")
 #endif
 
-typedef SWIFT_ENUM(NSInteger, GigyaSocialProvidersProxy, closed) {
+
+SWIFT_CLASS_NAMED("GigyaAccountProxy")
+@interface GigyaAccountProxy : NSObject
+@property (nonatomic, copy) NSString * _Nullable lastLogin;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+typedef SWIFT_ENUM_NAMED(NSInteger, GigyaSocialProvidersProxy, "GigyaSocialProvidersProxy", closed) {
   GigyaSocialProvidersProxyFacebook = 0,
   GigyaSocialProvidersProxyGoogle = 1,
   GigyaSocialProvidersProxyApple = 2,
   GigyaSocialProvidersProxyTwitter = 3,
   GigyaSocialProvidersProxyYahoo = 4,
+  GigyaSocialProvidersProxyLine = 5,
+  GigyaSocialProvidersProxyWechat = 6,
+  GigyaSocialProvidersProxyAmazon = 7,
+  GigyaSocialProvidersProxyBlogger = 8,
+  GigyaSocialProvidersProxyFoursquare = 9,
+  GigyaSocialProvidersProxyInstagram = 10,
+  GigyaSocialProvidersProxyKakao = 11,
+  GigyaSocialProvidersProxyLinkedin = 12,
+  GigyaSocialProvidersProxyLivedoor = 13,
+  GigyaSocialProvidersProxyMessenger = 14,
+  GigyaSocialProvidersProxyMixi = 15,
+  GigyaSocialProvidersProxyNaver = 16,
+  GigyaSocialProvidersProxyNetlog = 17,
+  GigyaSocialProvidersProxyOdnoklassniki = 18,
+  GigyaSocialProvidersProxyPaypaloauth = 19,
+  GigyaSocialProvidersProxyTencentQq = 20,
+  GigyaSocialProvidersProxyRenren = 21,
+  GigyaSocialProvidersProxySinaWeibo = 22,
+  GigyaSocialProvidersProxySpiceworks = 23,
+  GigyaSocialProvidersProxyVkontakte = 24,
+  GigyaSocialProvidersProxyWordpress = 25,
+  GigyaSocialProvidersProxyXing = 26,
+  GigyaSocialProvidersProxyYahooJapan = 27,
 };
+
+
+SWIFT_CLASS_NAMED("NetworkErrorProxy")
+@interface NetworkErrorProxy : NSObject
+@property (nonatomic, copy) NSString * _Nullable errorMessage;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
 
 @class UIViewController;
 
 SWIFT_CLASS_NAMED("SwiftFrameworkProxy")
 @interface SwiftFrameworkProxy : NSObject
 - (NSString * _Nonnull)initForApiKey:(NSString * _Nonnull)apiKey SWIFT_METHOD_FAMILY(none) SWIFT_WARN_UNUSED_RESULT;
-- (void)loginWithProvider:(enum GigyaSocialProvidersProxy)provider viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(void))completion;
+- (void)loginWithProvider:(enum GigyaSocialProvidersProxy)provider viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(GigyaAccountProxy * _Nullable, NetworkErrorProxy * _Nullable))completion;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
