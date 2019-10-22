@@ -212,7 +212,7 @@ typedef SWIFT_ENUM(NSInteger, GigyaSocialProvidersProxy, closed) {
 SWIFT_CLASS_NAMED("SwiftFrameworkProxy")
 @interface SwiftFrameworkProxy : NSObject
 - (NSString * _Nonnull)initForApiKey:(NSString * _Nonnull)apiKey SWIFT_METHOD_FAMILY(none) SWIFT_WARN_UNUSED_RESULT;
-- (void)loginWithProvider:(enum GigyaSocialProvidersProxy)provider viewController:(UIViewController * _Nonnull)viewController;
+- (void)loginWithProvider:(enum GigyaSocialProvidersProxy)provider viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(void))completion;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

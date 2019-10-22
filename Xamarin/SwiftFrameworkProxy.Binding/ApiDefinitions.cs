@@ -1,3 +1,4 @@
+using System;
 using Foundation;
 using UIKit;
 
@@ -11,8 +12,8 @@ namespace Binding
 		[Export ("initForApiKey:")]
 		string InitForApiKey (string apiKey);
 
-		// -(void)loginWithProvider:(enum GigyaSocialProvidersProxy)provider viewController:(UIViewController * _Nonnull)viewController;
-		[Export ("loginWithProvider:viewController:")]
-		void LoginWithProvider (GigyaSocialProvidersProxy provider, UIViewController viewController);
+		// -(void)loginWithProvider:(enum GigyaSocialProvidersProxy)provider viewController:(UIViewController * _Nonnull)viewController completion:(void (^ _Nonnull)(void))completion;
+		[Export ("loginWithProvider:viewController:completion:")]
+		void LoginWithProvider (GigyaSocialProvidersProxy provider, UIViewController viewController, Action completion);
 	}
 }
