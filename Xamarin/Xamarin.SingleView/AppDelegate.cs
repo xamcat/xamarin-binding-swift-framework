@@ -13,7 +13,10 @@ namespace Xamarin.SingleView
         [Export("application:didFinishLaunchingWithOptions:")]
         public bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-             return true;
+#if DEBUG
+            Calabash.Start();
+#endif
+            return true;
         }
 
        [Export("application:configurationForConnectingSceneSession:options:")]
