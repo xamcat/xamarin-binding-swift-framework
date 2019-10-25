@@ -13,9 +13,9 @@ namespace Xamarin.SingleView
         [Export("application:didFinishLaunchingWithOptions:")]
         public bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-#if DEBUG
-            Calabash.Start();
-#endif
+//#if DEBUG
+//            Xamarin.Calabash.Start();
+//#endif
             return true;
         }
 
