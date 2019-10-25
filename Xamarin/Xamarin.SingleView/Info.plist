@@ -5,13 +5,15 @@
 	<key>CFBundleDisplayName</key>
 	<string>Xamarin.SingleView</string>
 	<key>CFBundleIdentifier</key>
-    <string>com.microsoft.mobcat.Xamarin-SingleView</string>
+	<string>com.microsoft.mobcat.Xamarin-SingleView.alstrakh</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -32,7 +34,7 @@
 		</dict>
 	</dict>
 	<key>MinimumOSVersion</key>
-	<string>13.0</string>
+	<string>12.1</string>
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>
