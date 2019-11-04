@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,6 +21,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initializing..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yJ-aZ-VFL">
                                 <rect key="frame" x="20" y="360.5" width="374" height="175"/>
+                                <accessibility key="accessibilityConfiguration" identifier="StatusLabel"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="175" id="d5K-J2-pIk"/>
                                 </constraints>
@@ -29,6 +31,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Onf-wk-1q5">
                                 <rect key="frame" x="184" y="532" width="46" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="LoginButton" label="LoginButton"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="8LI-oY-iZo"/>
                                     <constraint firstAttribute="height" constant="30" id="a3D-h7-3HN"/>

@@ -5,13 +5,26 @@ using NUnit.Framework;
 using Xamarin.UITest;
 using Xamarin.UITest.iOS;
 using Xamarin.UITest.Queries;
+using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
 namespace Xamarin.SingleView.UITests
 {
     [TestFixture]
     public class Tests
     {
-        iOSApp app;
+        protected readonly Query LoginButton;
+        protected readonly Query StatusLabel;
+        protected readonly Query GigyaWebView;
+        protected readonly Query CancelButton;
+
+        protected iOSApp app;
+
+        public Tests()
+        {
+            LoginButton = x => x.Marked(nameof(LoginButton));
+            StatusLabel = x => x.Marked(nameof(StatusLabel));
+            CancelButton = x => x.Marked("Cancel");
+        }
 
         [SetUp]
         public void BeforeEachTest()
@@ -37,10 +50,29 @@ namespace Xamarin.SingleView.UITests
                 .StartApp();
         }
 
-        [Test]
-        public void AppLaunches()
+#if DEBUG
+        //[Test]
+        public void Repl()
         {
-            app.Screenshot("First screen.");
+            app.Repl();
+        }
+#endif
+
+        [Test]
+        public void HappyPath()
+        {
+            app.WaitForElement(StatusLabel);
+            app.WaitForElement(LoginButton);
+            app.Screenshot("App loaded.");
+            Assert.AreEqual(app.Query(StatusLabel).FirstOrDefault().Text, "!!! Gigya initialized with domain: us1.gigya.com");
+
+            app.Tap(LoginButton);
+            app.WaitForElement(GigyaWebView);
+            app.Screenshot("Login activated.");
+
+            app.Tap(CancelButton);
+            app.WaitForElement(LoginButton);
+            app.Screenshot("Login cancelled.");
         }
     }
 }
