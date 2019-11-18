@@ -51,7 +51,7 @@
       <Kind>Framework</Kind>
       <Frameworks>Foundation UIKit</Frameworks>
     </NativeReference>
-    <NativeReference Include="..\..\Swift\VendorFrameworks\gigya-swift-sdk-1.0.4\Gigya.framework">
+    <NativeReference Include="..\..\Swift\VendorFrameworks\gigya-swift-sdk\Gigya.framework">
       <Kind>Framework</Kind>
       <Frameworks>Foundation UIKit</Frameworks>
     </NativeReference>

@@ -1,0 +1,4 @@
+framework module Gigya {
+  header "Gigya-Swift.h"
+  requires objc
+}

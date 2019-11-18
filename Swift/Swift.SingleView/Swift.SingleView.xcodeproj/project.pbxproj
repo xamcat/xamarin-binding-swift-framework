@@ -35,7 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		534612882347F3C500E80C5C /* Gigya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gigya.framework; path = "../VendorFrameworks/gigya-swift-sdk-1.0.4/Gigya.framework"; sourceTree = "<group>"; };
+		534612882347F3C500E80C5C /* Gigya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gigya.framework; path = "../VendorFrameworks/gigya-swift-sdk/Gigya.framework"; sourceTree = "<group>"; };
 		53A544032347F99B00F7694A /* SwiftFrameworkProxy.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftFrameworkProxy.framework; path = "../VendorFrameworks/swift-framework-proxy/SwiftFrameworkProxy.framework"; sourceTree = "<group>"; };
 		53C74C242347ECC6003AF4C6 /* Swift.SingleView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swift.SingleView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C74C272347ECC6003AF4C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };

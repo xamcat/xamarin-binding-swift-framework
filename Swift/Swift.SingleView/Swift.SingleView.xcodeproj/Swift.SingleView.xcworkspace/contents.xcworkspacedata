@@ -5,7 +5,7 @@
       location = "container:">
    </FileRef>
    <Group
-      location = "group:../../VendorFrameworks/gigya-swift-sdk-1.0.4/Gigya.framework"
+      location = "group:../../VendorFrameworks/gigya-swift-sdk/Gigya.framework"
       name = "Gigya.framework">
       <FileRef
          location = "group:Gigya">
