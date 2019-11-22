@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/SwiftFrameworkProxy.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		r3ucY3MHuKaioNPVqS3lAR1fEoA=
+		5snpSHWImnBLNF7OgYzeWexiABM=
 		</data>
 		<key>Modules/SwiftFrameworkProxy.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/SwiftFrameworkProxy.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		r3ucY3MHuKaioNPVqS3lAR1fEoA=
+		5snpSHWImnBLNF7OgYzeWexiABM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -64,7 +64,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7RXgcyQzK3zWVJ2PP44WqvgTbzy3DjnDeGSwVf4qKO4=
+			ZvjiOiszFTsCbTWt9RXpjnfgZ5+4stqbyBIrdkHowMA=
 			</data>
 		</dict>
 		<key>Modules/SwiftFrameworkProxy.swiftmodule/arm64.swiftdoc</key>
@@ -78,7 +78,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			7RXgcyQzK3zWVJ2PP44WqvgTbzy3DjnDeGSwVf4qKO4=
+			ZvjiOiszFTsCbTWt9RXpjnfgZ5+4stqbyBIrdkHowMA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
