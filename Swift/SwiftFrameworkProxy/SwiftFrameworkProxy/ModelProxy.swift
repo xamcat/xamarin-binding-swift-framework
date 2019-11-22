@@ -103,58 +103,14 @@ public enum GigyaSocialProvidersProxy: Int {
 }
 
 @objc(GigyaAccountProxy)
-public class GigyaAccountProxy : NSObject, GigyaAccountProtocol {
-//    @objc
-    public var UID: String?
-//    @objc
-    public var profile: GigyaProfile?
-//    @objc
-    public var UIDSignature: String?
-//    @objc
-    public var apiVersion: Int?
-//    @objc
-    public var created: String?
-//    @objc
-    public var createdTimestamp: Double?
-//    @objc
-    public var isActive: Bool?
-//    @objc
-    public var isRegistered: Bool?
-//    @objc
-    public var isVerified: Bool?
+public class GigyaAccountProxy : NSObject {
     @objc
     public var lastLogin: String?
-//    @objc
-    public var lastLoginTimestamp: Double?
-//   @objc
-    public var lastUpdated: String?
-//    @objc
-    public var lastUpdatedTimestamp: Double?
-//    @objc
-    public var loginProvider: String?
-//    @objc
-    public var oldestDataUpdated: String?
-//    @objc
-    public var oldestDataUpdatedTimestamp: Double?
-//    @objc
-    public var registered: String?
-//    @objc
-    public var registeredTimestamp: Double?
-//    @objc
-    public var signatureTimestamp: String?
-//    @objc
-    public var socialProviders: String?
-//    @objc
-    public var verified: String?
-//    @objc
-    public var verifiedTimestamp: Double?
     
     static func fromGigyaAccount(source: GigyaAccount) -> GigyaAccountProxy {
         let result = GigyaAccountProxy()
         result.lastLogin = source.lastLogin
-        result.isRegistered = source.isRegistered
-        // TODO: fill the rest
-        
+
         return result;
     }
 }
@@ -185,6 +141,9 @@ public class NetworkErrorProxy : NSObject {
                break;
            case NetworkError.createURLRequestFailed:
                error.errorMessage = "create URL Request Failed"
+               break;
+           default:
+               error.errorMessage = "unknown error";
                break;
         }
         

@@ -35,13 +35,17 @@ public class SwiftFrameworkProxy : NSObject {
             viewController: viewController,
             completion: { result in
                 switch result {
+                   
+                    case .failure(let data):
+                        let error = NetworkErrorProxy.fromNetworkError(source: data.error)
+                        completion(nil, error);
+                        break;
                     case .success(let data):
                         let resultProxy = GigyaAccountProxy.fromGigyaAccount(source: data);
                         completion(resultProxy, nil)
                         break;
-                    case .failure(let data):
-                        let error = NetworkErrorProxy.fromNetworkError(source: data.error)
-                        completion(nil, error);
+                    default:
+                        completion(nil, nil)
                         break;
                 }
         })
