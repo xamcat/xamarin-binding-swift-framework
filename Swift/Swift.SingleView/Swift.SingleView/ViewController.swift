@@ -39,10 +39,18 @@ class ViewController: UIViewController {
     }
     
     @objc func btnLoginWithProxy_Tap(sender: UIButton!) {
+        // init
         let proxy = SwiftFrameworkProxy()
         let result = proxy.initFor(apiKey: "APIKey")
+        
+        // activate login
         lblMessage.text = result;
-        proxy.login(controller: self);
+        proxy.login(
+            provider: GigyaSocialProvidersProxy.google,
+            viewController: self,
+            completion: { (_, _) in
+               // Gigya.login.completed
+        });
       }
 }
 

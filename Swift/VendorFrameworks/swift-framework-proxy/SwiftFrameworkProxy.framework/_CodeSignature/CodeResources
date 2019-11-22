@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SwiftFrameworkProxy-Swift.h</key>
 		<data>
-		7g0/KPiX0driskcqRQj2kQQHX1k=
+		qHDLfrm0VVSMhb3eyu7+b2vVSEU=
 		</data>
 		<key>Headers/SwiftFrameworkProxy.h</key>
 		<data>
@@ -14,23 +14,23 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		tSre86GUKHqFvaWUY/TaEW1qOEk=
+		u9QYGXtECyBvCOcSa1xO+R3sLGs=
 		</data>
 		<key>Modules/SwiftFrameworkProxy.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		Q6RyuFP4DXTkOArD6WKjV5kW/x0=
+		MrRKG6AFnHMUqZgOLxwCm0k92kg=
 		</data>
 		<key>Modules/SwiftFrameworkProxy.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		SM2ROPSckFcSYFuPV4r+pRMqAgo=
+		Z2IjSMBb6ZCEWvyQ3v3ChBIjJ2g=
 		</data>
 		<key>Modules/SwiftFrameworkProxy.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		Q6RyuFP4DXTkOArD6WKjV5kW/x0=
+		MrRKG6AFnHMUqZgOLxwCm0k92kg=
 		</data>
 		<key>Modules/SwiftFrameworkProxy.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		SM2ROPSckFcSYFuPV4r+pRMqAgo=
+		Z2IjSMBb6ZCEWvyQ3v3ChBIjJ2g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -43,7 +43,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YRJX3SKh2jyGwAhL9gjmtrImXm8qK+hUmAHGXrlDfkM=
+			AoH0VhBBx5w3f7Az9xPUeEnslZifdJ9MDQhQz4lzCEE=
 			</data>
 		</dict>
 		<key>Headers/SwiftFrameworkProxy.h</key>
@@ -57,28 +57,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6wVLFgKlaOjNspvpHHwdodru/QNOCJA2J6M1y5DldNM=
+			apY5rCYEUP+MZTLSs6+RN+FdXz+pWaeiIGKm+31LF8Y=
 			</data>
 		</dict>
 		<key>Modules/SwiftFrameworkProxy.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CYTQvHbYa5gHwQrraFH58iRl0GZs21a9tISIsW6LKXI=
+			a79w2wKNp0uEZhBiZJ5DuhM6eV7u1oBIcJzfY8ivPrc=
 			</data>
 		</dict>
 		<key>Modules/SwiftFrameworkProxy.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6wVLFgKlaOjNspvpHHwdodru/QNOCJA2J6M1y5DldNM=
+			apY5rCYEUP+MZTLSs6+RN+FdXz+pWaeiIGKm+31LF8Y=
 			</data>
 		</dict>
 		<key>Modules/SwiftFrameworkProxy.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CYTQvHbYa5gHwQrraFH58iRl0GZs21a9tISIsW6LKXI=
+			a79w2wKNp0uEZhBiZJ5DuhM6eV7u1oBIcJzfY8ivPrc=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -10,7 +10,7 @@
 		53069FBE2347E08A00663A24 /* SwiftFrameworkProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 53069FBC2347E08A00663A24 /* SwiftFrameworkProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		53069FC52347E0AD00663A24 /* SwiftFrameworkProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53069FC42347E0AD00663A24 /* SwiftFrameworkProxy.swift */; };
 		537EADED235913200023A666 /* ModelProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537EADEC235913200023A666 /* ModelProxy.swift */; };
-		53C74C1A2347E3CB003AF4C6 /* Gigya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53C74C192347E3CB003AF4C6 /* Gigya.framework */; };
+		53D457B12384A08D00D7A06F /* Gigya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53D457AE23849FBB00D7A06F /* Gigya.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,7 +19,7 @@
 		53069FBD2347E08A00663A24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53069FC42347E0AD00663A24 /* SwiftFrameworkProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFrameworkProxy.swift; sourceTree = "<group>"; };
 		537EADEC235913200023A666 /* ModelProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProxy.swift; sourceTree = "<group>"; };
-		53C74C192347E3CB003AF4C6 /* Gigya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gigya.framework; path = "../VendorFrameworks/gigya-swift-sdk-1.0.4/Gigya.framework"; sourceTree = "<group>"; };
+		53D457AE23849FBB00D7A06F /* Gigya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gigya.framework; path = "../VendorFrameworks/gigya-swift-sdk/Gigya.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,7 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53C74C1A2347E3CB003AF4C6 /* Gigya.framework in Frameworks */,
+				53D457B12384A08D00D7A06F /* Gigya.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,7 +39,7 @@
 			children = (
 				53069FBB2347E08A00663A24 /* SwiftFrameworkProxy */,
 				53069FBA2347E08A00663A24 /* Products */,
-				53C74C192347E3CB003AF4C6 /* Gigya.framework */,
+				53D457AD23849FBB00D7A06F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +60,14 @@
 				537EADEC235913200023A666 /* ModelProxy.swift */,
 			);
 			path = SwiftFrameworkProxy;
+			sourceTree = "<group>";
+		};
+		53D457AD23849FBB00D7A06F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53D457AE23849FBB00D7A06F /* Gigya.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +292,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/../VendorFrameworks/**",
 				);
 				INFOPLIST_FILE = SwiftFrameworkProxy/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -317,6 +326,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/../VendorFrameworks/**",
 				);
 				INFOPLIST_FILE = SwiftFrameworkProxy/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
