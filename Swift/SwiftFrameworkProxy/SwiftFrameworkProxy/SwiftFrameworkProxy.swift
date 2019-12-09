@@ -17,7 +17,7 @@ public class SwiftFrameworkProxy : NSObject {
     public func initFor(apiKey: String) -> String {
         Gigya.sharedInstance().initFor(apiKey: apiKey)
         let gigyaDomain = Gigya.sharedInstance().config.apiDomain
-        let result = "!!! Gigya initialized with domain: \(gigyaDomain)"
+        let result = "Gigya initialized with domain: \(gigyaDomain)"
         return result
     }
     
@@ -43,9 +43,6 @@ public class SwiftFrameworkProxy : NSObject {
                     case .success(let data):
                         let resultProxy = GigyaAccountProxy.fromGigyaAccount(source: data);
                         completion(resultProxy, nil)
-                        break;
-                    default:
-                        completion(nil, nil)
                         break;
                 }
         })

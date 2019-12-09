@@ -16,73 +16,69 @@
 		<data>
 		8M+lIPcv26byCgvf8XJ1asurp94=
 		</data>
-		<key>Headers/NetworkError.swift</key>
-		<data>
-		cABMVqmy2xWMsqG8t7VHtcSZUFY=
-		</data>
 		<key>Info.plist</key>
 		<data>
-		wUWXPA9E7tQjW+e5nR6jm2XpKWU=
+		UGkCSgO6oYMubl9wG3RwN2NM9Es=
 		</data>
 		<key>Modules/Gigya.swiftmodule/arm.swiftdoc</key>
 		<data>
-		qIpnPKCmqiDdgqFcpfweNojlXoE=
+		Ew9XBJn5M944+Qp7FvCgCPKaQk0=
 		</data>
 		<key>Modules/Gigya.swiftmodule/arm.swiftinterface</key>
 		<data>
-		N4zdTrXJTsbYMYXAedqD5c5Pp8M=
+		PuUFyW0LvueSvj/4/V0SopPdj0o=
 		</data>
 		<key>Modules/Gigya.swiftmodule/arm.swiftmodule</key>
 		<data>
-		hc5wnxNkA1k1ZzDHOk4BHi4q4Hs=
+		DeeqWabc4K45+uBCqCD47bkYqLw=
 		</data>
 		<key>Modules/Gigya.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		Erf4plvNyyUokwBn8AorT09jKKc=
+		PPPMcUmPiZB8TZfIKBu1xN92PQ4=
 		</data>
 		<key>Modules/Gigya.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		4eTWukC5JRRmxK+OXukGcS1KCF0=
+		acSIEltQDiZO/bTM4FsFc5qSQXE=
 		</data>
 		<key>Modules/Gigya.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		xWW44/eoRv/gnkJqEUIbD29q0LE=
+		decuLPv1IxFxqJmKZZCA3Yk+z54=
 		</data>
 		<key>Modules/Gigya.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		Erf4plvNyyUokwBn8AorT09jKKc=
+		PPPMcUmPiZB8TZfIKBu1xN92PQ4=
 		</data>
 		<key>Modules/Gigya.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		4eTWukC5JRRmxK+OXukGcS1KCF0=
+		acSIEltQDiZO/bTM4FsFc5qSQXE=
 		</data>
 		<key>Modules/Gigya.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		xWW44/eoRv/gnkJqEUIbD29q0LE=
+		decuLPv1IxFxqJmKZZCA3Yk+z54=
 		</data>
 		<key>Modules/Gigya.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<data>
-		qIpnPKCmqiDdgqFcpfweNojlXoE=
+		Ew9XBJn5M944+Qp7FvCgCPKaQk0=
 		</data>
 		<key>Modules/Gigya.swiftmodule/armv7-apple-ios.swiftinterface</key>
 		<data>
-		N4zdTrXJTsbYMYXAedqD5c5Pp8M=
+		PuUFyW0LvueSvj/4/V0SopPdj0o=
 		</data>
 		<key>Modules/Gigya.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<data>
-		hc5wnxNkA1k1ZzDHOk4BHi4q4Hs=
+		DeeqWabc4K45+uBCqCD47bkYqLw=
 		</data>
 		<key>Modules/Gigya.swiftmodule/armv7.swiftdoc</key>
 		<data>
-		qIpnPKCmqiDdgqFcpfweNojlXoE=
+		Ew9XBJn5M944+Qp7FvCgCPKaQk0=
 		</data>
 		<key>Modules/Gigya.swiftmodule/armv7.swiftinterface</key>
 		<data>
-		N4zdTrXJTsbYMYXAedqD5c5Pp8M=
+		PuUFyW0LvueSvj/4/V0SopPdj0o=
 		</data>
 		<key>Modules/Gigya.swiftmodule/armv7.swiftmodule</key>
 		<data>
-		hc5wnxNkA1k1ZzDHOk4BHi4q4Hs=
+		DeeqWabc4K45+uBCqCD47bkYqLw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -124,180 +120,169 @@
 			9MDpASEPEZyC4iQVmqxqqBtJydJydXYh473jNPkhp0w=
 			</data>
 		</dict>
-		<key>Headers/NetworkError.swift</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			cABMVqmy2xWMsqG8t7VHtcSZUFY=
-			</data>
-			<key>hash2</key>
-			<data>
-			Ry7yE1nDB217eLrg/qHu/cL6OYo7pReBMSC/E6kkxVI=
-			</data>
-		</dict>
 		<key>Modules/Gigya.swiftmodule/arm.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qIpnPKCmqiDdgqFcpfweNojlXoE=
+			Ew9XBJn5M944+Qp7FvCgCPKaQk0=
 			</data>
 			<key>hash2</key>
 			<data>
-			2xbb084I/cRlO4p3uPtc3wDxZKUrivvskf1wWrELXuI=
+			oWt8eym3JnIda/uB5t/66xwfWU19HWdplwq2eluLWoQ=
 			</data>
 		</dict>
 		<key>Modules/Gigya.swiftmodule/arm.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			N4zdTrXJTsbYMYXAedqD5c5Pp8M=
+			PuUFyW0LvueSvj/4/V0SopPdj0o=
 			</data>
 			<key>hash2</key>
 			<data>
-			NgEizseMbV5Kv9XOUvIRf6c4gBFbQOxSRZUMOpaCsTE=
+			HZ6CqoAl1DyKM9dTCe/5YkDwQOML2FnUcnM6SWbY/wg=
 			</data>
 		</dict>
 		<key>Modules/Gigya.swiftmodule/arm.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hc5wnxNkA1k1ZzDHOk4BHi4q4Hs=
+			DeeqWabc4K45+uBCqCD47bkYqLw=
 			</data>
 			<key>hash2</key>
 			<data>
-			HVmhkdhsmaaG9wJ1NZdgoNg/wkkQQuR4Dlc2CBLmoO8=
+			G+NOV2ROMNF0bSv6cBeFlRLH/4j72QCAHSJ69inD058=
 			</data>
 		</dict>
 		<key>Modules/Gigya.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Erf4plvNyyUokwBn8AorT09jKKc=
+			PPPMcUmPiZB8TZfIKBu1xN92PQ4=
 			</data>
 			<key>hash2</key>
 			<data>
-			00GI0J24WPggyzHPSwizQGOu860iVk8P5QEvZ3o6vdg=
+			V21TLHUYmIJy7zP29Oayk7sK3GcMJZ8quFXuZUKKQsA=
 			</data>
 		</dict>
 		<key>Modules/Gigya.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4eTWukC5JRRmxK+OXukGcS1KCF0=
+			acSIEltQDiZO/bTM4FsFc5qSQXE=
 			</data>
 			<key>hash2</key>
 			<data>
-			rGwCqPvxoqOl6UND9I9aAJBK6P5BBAJnRVq8u1/bi0M=
+			iZ70Mdie0XPxTqBSXMhpCwwoeTopR8VCeJHRaCII5s8=
 			</data>
 		</dict>
 		<key>Modules/Gigya.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xWW44/eoRv/gnkJqEUIbD29q0LE=
+			decuLPv1IxFxqJmKZZCA3Yk+z54=
 			</data>
 			<key>hash2</key>
 			<data>
-			ImHhzWYYD2EIwmxYrv/CXd4IswIn5pQhQiswBaKw52Q=
+			RmEi3p7ledMZsZnQZLyZLsNqcCgQYVl32L2QuYLbx8s=
 			</data>
 		</dict>
 		<key>Modules/Gigya.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Erf4plvNyyUokwBn8AorT09jKKc=
+			PPPMcUmPiZB8TZfIKBu1xN92PQ4=
 			</data>
 			<key>hash2</key>
 			<data>
-			00GI0J24WPggyzHPSwizQGOu860iVk8P5QEvZ3o6vdg=
+			V21TLHUYmIJy7zP29Oayk7sK3GcMJZ8quFXuZUKKQsA=
 			</data>
 		</dict>
 		<key>Modules/Gigya.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4eTWukC5JRRmxK+OXukGcS1KCF0=
+			acSIEltQDiZO/bTM4FsFc5qSQXE=
 			</data>
 			<key>hash2</key>
 			<data>
-			rGwCqPvxoqOl6UND9I9aAJBK6P5BBAJnRVq8u1/bi0M=
+			iZ70Mdie0XPxTqBSXMhpCwwoeTopR8VCeJHRaCII5s8=
 			</data>
 		</dict>
 		<key>Modules/Gigya.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xWW44/eoRv/gnkJqEUIbD29q0LE=
+			decuLPv1IxFxqJmKZZCA3Yk+z54=
 			</data>
 			<key>hash2</key>
 			<data>
-			ImHhzWYYD2EIwmxYrv/CXd4IswIn5pQhQiswBaKw52Q=
+			RmEi3p7ledMZsZnQZLyZLsNqcCgQYVl32L2QuYLbx8s=
 			</data>
 		</dict>
 		<key>Modules/Gigya.swiftmodule/armv7-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qIpnPKCmqiDdgqFcpfweNojlXoE=
+			Ew9XBJn5M944+Qp7FvCgCPKaQk0=
 			</data>
 			<key>hash2</key>
 			<data>
-			2xbb084I/cRlO4p3uPtc3wDxZKUrivvskf1wWrELXuI=
+			oWt8eym3JnIda/uB5t/66xwfWU19HWdplwq2eluLWoQ=
 			</data>
 		</dict>
 		<key>Modules/Gigya.swiftmodule/armv7-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			N4zdTrXJTsbYMYXAedqD5c5Pp8M=
+			PuUFyW0LvueSvj/4/V0SopPdj0o=
 			</data>
 			<key>hash2</key>
 			<data>
-			NgEizseMbV5Kv9XOUvIRf6c4gBFbQOxSRZUMOpaCsTE=
+			HZ6CqoAl1DyKM9dTCe/5YkDwQOML2FnUcnM6SWbY/wg=
 			</data>
 		</dict>
 		<key>Modules/Gigya.swiftmodule/armv7-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hc5wnxNkA1k1ZzDHOk4BHi4q4Hs=
+			DeeqWabc4K45+uBCqCD47bkYqLw=
 			</data>
 			<key>hash2</key>
 			<data>
-			HVmhkdhsmaaG9wJ1NZdgoNg/wkkQQuR4Dlc2CBLmoO8=
+			G+NOV2ROMNF0bSv6cBeFlRLH/4j72QCAHSJ69inD058=
 			</data>
 		</dict>
 		<key>Modules/Gigya.swiftmodule/armv7.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			qIpnPKCmqiDdgqFcpfweNojlXoE=
+			Ew9XBJn5M944+Qp7FvCgCPKaQk0=
 			</data>
 			<key>hash2</key>
 			<data>
-			2xbb084I/cRlO4p3uPtc3wDxZKUrivvskf1wWrELXuI=
+			oWt8eym3JnIda/uB5t/66xwfWU19HWdplwq2eluLWoQ=
 			</data>
 		</dict>
 		<key>Modules/Gigya.swiftmodule/armv7.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			N4zdTrXJTsbYMYXAedqD5c5Pp8M=
+			PuUFyW0LvueSvj/4/V0SopPdj0o=
 			</data>
 			<key>hash2</key>
 			<data>
-			NgEizseMbV5Kv9XOUvIRf6c4gBFbQOxSRZUMOpaCsTE=
+			HZ6CqoAl1DyKM9dTCe/5YkDwQOML2FnUcnM6SWbY/wg=
 			</data>
 		</dict>
 		<key>Modules/Gigya.swiftmodule/armv7.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			hc5wnxNkA1k1ZzDHOk4BHi4q4Hs=
+			DeeqWabc4K45+uBCqCD47bkYqLw=
 			</data>
 			<key>hash2</key>
 			<data>
-			HVmhkdhsmaaG9wJ1NZdgoNg/wkkQQuR4Dlc2CBLmoO8=
+			G+NOV2ROMNF0bSv6cBeFlRLH/4j72QCAHSJ69inD058=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

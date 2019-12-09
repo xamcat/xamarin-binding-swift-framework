@@ -8,8 +8,6 @@
 	<string>com.microsoft.mobcat.Xamarin-SingleView.alstrakh</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
-	<key>CFBundleVersion</key>
-	<string>1.12</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>ITSAppUsesNonExemptEncryption</key>
@@ -67,5 +65,7 @@
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>CFBundleName</key>
 	<string>Xamarin.SingleView</string>
+	<key>CFBundleVersion</key>
+	<string>2.4</string>
 </dict>
 </plist>

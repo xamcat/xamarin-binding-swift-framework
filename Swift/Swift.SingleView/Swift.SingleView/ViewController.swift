@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         // init
         Gigya.sharedInstance().initFor(apiKey: "APIKey");
         let gigyaDomain = Gigya.sharedInstance().config.apiDomain
-        let result = "!!! Gigya initialized with domain: \(gigyaDomain)"
+        let result = "Gigya initialized with domain: \(gigyaDomain)"
         lblMessage.text = result;
         
         // activate login

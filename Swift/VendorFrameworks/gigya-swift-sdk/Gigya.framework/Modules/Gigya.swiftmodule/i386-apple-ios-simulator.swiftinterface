@@ -6,7 +6,15 @@ import Foundation
 import NotificationCenter
 import Swift
 import UIKit
+import UserNotifications
 import WebKit
+public class GeneralUtils {
+  public func iosVersion() -> Swift.String
+  public func showNotification(title: Swift.String, body: Swift.String, id: Swift.String, userInfo: [Swift.AnyHashable : Any] = [:])
+  public func getTopViewController() -> UIKit.UIViewController?
+  public func show(vc: UIKit.UIViewController, title: Swift.String, message: Swift.String, result: @escaping (Swift.Bool) -> Swift.Void)
+  @objc deinit
+}
 public struct ApiRequestModel {
   public let method: Swift.String
   public let params: [Swift.String : Any]?
@@ -19,11 +27,11 @@ public class IOCContainer {
 extension IOCContainer {
   public func resolve<Service>(_ serviceType: Service.Type) -> Service?
 }
-public enum GigyaApiResult<ResponseType> {
+@frozen public enum GigyaApiResult<ResponseType> {
   case success(data: ResponseType)
   case failure(_: Gigya.NetworkError)
 }
-public enum GigyaLoginResult<ResponseType> where ResponseType : Gigya.GigyaAccountProtocol {
+@frozen public enum GigyaLoginResult<ResponseType> where ResponseType : Gigya.GigyaAccountProtocol {
   case success(data: ResponseType)
   case failure(Gigya.LoginApiError<ResponseType>)
 }
@@ -31,7 +39,7 @@ public struct LoginApiError<T> where T : Gigya.GigyaAccountProtocol {
   public let error: Gigya.NetworkError
   public let interruption: Gigya.GigyaInterruptions<T>?
 }
-public enum GigyaInterruptions<T> where T : Gigya.GigyaAccountProtocol {
+@frozen public enum GigyaInterruptions<T> where T : Gigya.GigyaAccountProtocol {
   case pendingRegistration(resolver: Gigya.PendingRegistrationResolver<T>)
   case pendingVerification(regToken: Swift.String)
   case pendingPasswordChange(regToken: Swift.String)
@@ -39,7 +47,7 @@ public enum GigyaInterruptions<T> where T : Gigya.GigyaAccountProtocol {
   case pendingTwoFactorRegistration(response: Gigya.GigyaResponseModel, inactiveProviders: [Gigya.TFAProviderModel]?, factory: Gigya.TFAResolverFactory<T>)
   case pendingTwoFactorVerification(response: Gigya.GigyaResponseModel, activeProviders: [Gigya.TFAProviderModel]?, factory: Gigya.TFAResolverFactory<T>)
 }
-public enum GigyaBiometricResult {
+@frozen public enum GigyaBiometricResult {
   case success
   case failure
   public static func == (a: Gigya.GigyaBiometricResult, b: Gigya.GigyaBiometricResult) -> Swift.Bool
@@ -116,13 +124,23 @@ public struct GigyaAccount : Gigya.GigyaAccountProtocol {
 }
 public protocol GigyaInstanceProtocol {
 }
-public class LinkAccountsResolver<T> where T : Gigya.GigyaAccountProtocol {
-  public var conflictingAccount: Gigya.ConflictingAccount?
-  public func linkToSite(loginId: Swift.String, password: Swift.String)
-  public func linkToSocial(provider: Gigya.GigyaSocialProviders, viewController: UIKit.UIViewController)
+@frozen public enum PushNotificationModes : Swift.String {
+  case optin
+  case verify
+  case cancel
+  public typealias RawValue = Swift.String
+  public init?(rawValue: Swift.String)
+  public var rawValue: Swift.String {
+    get
+  }
+}
+final public class LinkAccountsResolver<T> where T : Gigya.GigyaAccountProtocol {
+  final public var conflictingAccount: Gigya.ConflictingAccount?
+  final public func linkToSite(loginId: Swift.String, password: Swift.String)
+  final public func linkToSocial(provider: Gigya.GigyaSocialProviders, viewController: UIKit.UIViewController)
   @objc deinit
 }
-public enum GigyaResult<Response> {
+@frozen public enum GigyaResult<Response> {
   case success(data: Response)
   case failure(Gigya.NetworkError)
 }
@@ -179,6 +197,13 @@ public struct GigyaResponseModel : Swift.Codable {
   public func toDictionary() -> [Swift.String : Any]
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
+}
+public typealias RemoteMsgClosure = ([Swift.AnyHashable : Any]) -> ()
+public protocol PushNotificationsServiceExternalProtocol {
+  func getPushToken() -> Swift.String?
+  func registerTo(key: Swift.String, closure: @escaping Gigya.RemoteMsgClosure)
+  func registerForPushNotifications(compilation: @escaping (Swift.Bool) -> ())
+  func getNotificationSettings(_ compilation: @escaping (Swift.Bool) -> ())
 }
 public struct TFAProviderModel : Swift.Codable {
   public let name: Gigya.TFAProvider
@@ -343,6 +368,10 @@ public enum TFAProvider : Swift.String, Swift.Codable {
   public var rawValue: Swift.String {
     get
   }
+}
+public class GigyaAlertControllerUtils {
+  public static func show(vc: UIKit.UIViewController, title: Swift.String, message: Swift.String, result: @escaping (Swift.Bool) -> Swift.Void)
+  @objc deinit
 }
 public class GigyaConfig {
   public var apiKey: Swift.String?
@@ -524,7 +553,7 @@ final public class Gigya {
   public static func sharedInstance<T>(_ dataType: T.Type) -> Gigya.GigyaCore<T> where T : Gigya.GigyaAccountProtocol
   @objc deinit
 }
-public class GigyaLogger {
+final public class GigyaLogger {
   public static func setDebugMode(to debugModeEnabled: Swift.Bool)
   public static func error(with clazz: Swift.AnyClass, message: Swift.String, generic: Any? = nil) -> Swift.Never
   public static func log(with clazz: Any?, message: Swift.String)
@@ -562,9 +591,11 @@ public struct GigyaDefinitions {
     public static let sendVerificationCodeTFA: Swift.String
     public static let totpRegisterTFA: Swift.String
     public static let totpVerifyTFA: Swift.String
-    public static let pushUpdateDeviceTFA: Swift.String
+    public static let pushUpdateDevice: Swift.String
     public static let pushVerifyTFA: Swift.String
     public static let pushOptinTFA: Swift.String
+    public static let pushOptinLogin: Swift.String
+    public static let pushVerifyLogin: Swift.String
   }
   public struct Tfa {
     public static let email: Swift.String
@@ -586,9 +617,9 @@ public struct ConflictingAccount : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
 }
-public class PendingRegistrationResolver<T> where T : Gigya.GigyaAccountProtocol {
+final public class PendingRegistrationResolver<T> where T : Gigya.GigyaAccountProtocol {
   final public let regToken: Swift.String
-  public func setAccount(params: [Swift.String : Any])
+  final public func setAccount(params: [Swift.String : Any])
   @objc deinit
 }
 public class TFAResolverFactory<A> where A : Gigya.GigyaAccountProtocol {
@@ -599,13 +630,16 @@ public struct SessionInfoModel : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
   public func encode(to encoder: Swift.Encoder) throws
 }
-public enum NetworkError : Swift.Error {
+@frozen public enum NetworkError : Swift.Error {
   case gigyaError(data: Gigya.GigyaResponseModel)
   case providerError(data: Swift.String)
   case networkError(error: Swift.Error)
   case emptyResponse
   case jsonParsingError(error: Swift.Error)
   case createURLRequestFailed
+}
+public protocol BasePushManagerProtocol {
+  var idintityKey: Swift.String { get }
 }
 public enum GigyaSocialProviders {
   case facebook
@@ -683,6 +717,7 @@ final public class GigyaCore<T> : Gigya.GigyaInstanceProtocol where T : Gigya.Gi
   final public func send(api: Swift.String, params: [Swift.String : Any] = [:], completion: @escaping (Gigya.GigyaApiResult<Gigya.GigyaDictionary>) -> Swift.Void)
   final public func send<B>(dataType: B.Type, api: Swift.String, params: [Swift.String : Any] = [:], completion: @escaping (Gigya.GigyaApiResult<B>) -> Swift.Void) where B : Swift.Decodable, B : Swift.Encodable
   final public func isLoggedIn() -> Swift.Bool
+  final public func setSession(_ session: Gigya.GigyaSession)
   final public func logout(completion: @escaping (Gigya.GigyaApiResult<Gigya.GigyaDictionary>) -> Swift.Void)
   final public func login(loginId: Swift.String, password: Swift.String, params: [Swift.String : Any] = [:], completion: @escaping (Gigya.GigyaLoginResult<T>) -> Swift.Void)
   final public func login(with provider: Gigya.GigyaSocialProviders, viewController: UIKit.UIViewController, params: [Swift.String : Any] = [:], completion: @escaping (Gigya.GigyaLoginResult<T>) -> Swift.Void)
@@ -698,10 +733,18 @@ final public class GigyaCore<T> : Gigya.GigyaInstanceProtocol where T : Gigya.Gi
   }
   final public func handleInterruptions(sdkHandles: Swift.Bool)
   final public func createWebBridge() -> Gigya.GigyaWebBridge<T>
+  @available(iOS 10.0, *)
+  final public func receivePush(userInfo: [Swift.AnyHashable : Any], completion: @escaping (UIKit.UIBackgroundFetchResult) -> Swift.Void)
+  final public func foregroundNotification(with data: [Swift.AnyHashable : Any])
+  @available(iOS 10.0, *)
+  final public func updatePushToken(key: Swift.String)
+  final public func verifyPush(with response: UserNotifications.UNNotificationResponse)
   @objc deinit
 }
 extension Gigya.GigyaBiometricResult : Swift.Equatable {}
 extension Gigya.GigyaBiometricResult : Swift.Hashable {}
+extension Gigya.PushNotificationModes : Swift.Hashable {}
+extension Gigya.PushNotificationModes : Swift.RawRepresentable {}
 extension Gigya.ApiStatusCode : Swift.Equatable {}
 extension Gigya.ApiStatusCode : Swift.Hashable {}
 extension Gigya.ApiStatusCode : Swift.RawRepresentable {}
