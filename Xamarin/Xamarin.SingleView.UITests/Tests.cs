@@ -64,7 +64,7 @@ namespace Xamarin.SingleView.UITests
             app.WaitForElement(StatusLabel);
             app.WaitForElement(LoginButton);
             app.Screenshot("App loaded.");
-            Assert.AreEqual(app.Query(StatusLabel).FirstOrDefault().Text, "!!! Gigya initialized with domain: us1.gigya.com");
+            Assert.AreEqual(app.Query(StatusLabel).FirstOrDefault().Text, "Gigya initialized with domain: us1.gigya.com");
 
             app.Tap(LoginButton);
             app.WaitForElement(GigyaWebView);

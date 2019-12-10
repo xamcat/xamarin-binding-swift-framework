@@ -142,9 +142,6 @@ public class NetworkErrorProxy : NSObject {
            case NetworkError.createURLRequestFailed:
                error.errorMessage = "create URL Request Failed"
                break;
-           default:
-               error.errorMessage = "unknown error";
-               break;
         }
         
         return error;
