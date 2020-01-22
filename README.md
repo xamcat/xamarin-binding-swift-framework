@@ -323,7 +323,7 @@ The final step is to consume the Xamarin.iOS binding library in a Xamarin.iOS ap
     Gigya initialized with domain: us1.gigya.com
     ```
 
-     ![swiftproxy result](SolutionItems/swiftproxy-result.png)
+     <img src='SolutionItems/swiftproxy-result.png' width='300px' alt='swiftproxy result'/>
 
 Congratulations! You have successfully created a Xamarin.iOS app and a binding library which consumes a Swift framework. The application above will successfully run on iOS 12.2+ because starting from this iOS version Apple introduced ABI stability and every iOS starting 12.2+ includes Swift runtime libraries which could be used to run your application compiled with Swift 5.1+. If you need to add support for earlier iOS versions, there are a few more steps to accomplish.
 
