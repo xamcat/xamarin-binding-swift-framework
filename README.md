@@ -72,10 +72,11 @@ As an example, in this tutorial we are going to bind the [Gigya Swift SDK](https
 
     ![xcode name framework project](SolutionItems/xcode-name-framework-project.png)
 
-1. Download the [Gigya framework](https://developers.gigya.com/display/GD/Swift+SDK) from the developer website and unpack it. At time of writing, the latest version is [Gigya Swift SDK 1.0.6](https://downloads.gigya.com/predownload?fileName=Gigya.swift.core.framework.1.0.6.zip)
-1. Rename the downloaded SDK file to **Gigya** ensuring that it ends with a **.framework** extension
+1. Download the [Gigya framework](https://developers.gigya.com/display/GD/Swift+SDK) from the developer website and unpack it. At time of writing, the latest version is [Gigya Swift SDK 1.0.9](https://downloads.gigya.com/predownload?fileName=Swift-Core-framework-1.0.9.zip)
+
 1. Select the **SwiftFrameworkProxy** from the project files explorer then select the General tab
-1. Drag and drop the Gigya.framework package to the Xcode Frameworks and Libraries list under the General tab check the "Copy items if needed" option while adding the framework.
+
+1. Drag and drop the **Gigya.framework** package to the Xcode Frameworks and Libraries list under the General tab check the "Copy items if needed" option while adding the framework.
 
     ![xcode copy framework](SolutionItems/xcode-copy-framework.png)
 
