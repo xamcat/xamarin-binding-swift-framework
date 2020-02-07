@@ -26,7 +26,7 @@ namespace Xamarin.SingleView
 
         private void btnLogin_Tap(object sender, EventArgs e)
         {
-            _proxy.LoginWithProvider(GigyaSocialProvidersProxy.Google, this, (result, error) =>
+            _proxy.LoginWithProvider(GigyaSocialProvidersProxy.Instagram, this, (result, error) =>
             {
                 System.Diagnostics.Debug.WriteLine($"btnLogin_Tap:Completed:\n  result:{result?.LastLogin}\n    error:{error?.ErrorMessage}");
             });

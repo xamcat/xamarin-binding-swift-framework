@@ -318,13 +318,21 @@ The final step is to consume the Xamarin.iOS binding library in a Xamarin.iOS ap
     }
     ```
 
-1. Run the app, in the output you should see the following line:
+1. Create a button with a name `btnLogin` and add the following button click handler to activate an authentication flow:
 
-    ```console
-    Gigya initialized with domain: us1.gigya.com
+    ```csharp
+    private void btnLogin_Tap(object sender, EventArgs e)
+    {
+        _proxy.LoginWithProvider(GigyaSocialProvidersProxy.Instagram, this, (result, error) =>
+        {
+            // process your login result here
+        });
+    }
     ```
 
-     <img src='SolutionItems/swiftproxy-result.png' width='300px' alt='swiftproxy result'/>
+1. Run the app, in the debug output you should see the following line: `Gigya initialized with domain: us1.gigya.com`. Click the button to activate the authentication flow:
+
+    ![swiftproxy result](SolutionItems/swiftproxy-result.png)
 
 Congratulations! You have successfully created a Xamarin.iOS app and a binding library which consumes a Swift framework. The application above will successfully run on iOS 12.2+ because starting from this iOS version [Apple introduced ABI stability](https://swift.org/blog/swift-5-1-released/) and every iOS starting 12.2+ includes Swift runtime libraries which could be used to run your application compiled with Swift 5.1+. If you need to add support for earlier iOS versions, there are a few more steps to accomplish.
 
