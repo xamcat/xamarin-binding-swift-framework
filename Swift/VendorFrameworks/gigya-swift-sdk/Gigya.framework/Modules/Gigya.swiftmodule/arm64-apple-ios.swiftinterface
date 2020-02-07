@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.1.2 (swiftlang-1100.0.278 clang-1100.0.33.9)
+// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
 // swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Gigya
 import CommonCrypto
 import Foundation
@@ -64,6 +64,7 @@ open class TFAResolver<T> : Gigya.Resolver<T> where T : Gigya.GigyaAccountProtoc
 public class GigyaWebBridge<T> : ObjectiveC.NSObject, WebKit.WKScriptMessageHandler where T : Gigya.GigyaAccountProtocol {
   public func attachTo(webView: WebKit.WKWebView, viewController: UIKit.UIViewController, pluginEvent: @escaping (Gigya.GigyaPluginEvent<T>) -> Swift.Void)
   @objc public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+  public func webView(_ webView: WebKit.WKWebView, runJavaScriptAlertPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping () -> Swift.Void)
   @objc override dynamic public init()
   @objc deinit
 }
@@ -140,12 +141,16 @@ final public class LinkAccountsResolver<T> where T : Gigya.GigyaAccountProtocol 
   final public func linkToSocial(provider: Gigya.GigyaSocialProviders, viewController: UIKit.UIViewController)
   @objc deinit
 }
+public class InterceptorsUtils {
+  @objc deinit
+}
 @frozen public enum GigyaResult<Response> {
   case success(data: Response)
   case failure(Gigya.NetworkError)
 }
 @objc(GSSession) public class GigyaSession : ObjectiveC.NSObject, Foundation.NSSecureCoding {
   @objc public static var supportsSecureCoding: Swift.Bool
+  public init?(sessionToken token: Swift.String, secret: Swift.String, expiration: Swift.Double? = nil)
   @objc public func encode(with aCoder: Foundation.NSCoder)
   @objc required public init?(coder aDecoder: Foundation.NSCoder)
   @objc override dynamic public init()
@@ -292,6 +297,7 @@ open class Resolver<T> where T : Gigya.GigyaAccountProtocol {
 public typealias PluginEventData = [Swift.String : Any]
 public enum GigyaPluginEvent<T> where T : Gigya.GigyaAccountProtocol {
   case onBeforeValidation(event: Gigya.PluginEventData)
+  case onAfterValidation(event: Gigya.PluginEventData)
   case onBeforeSubmit(event: Gigya.PluginEventData)
   case onSubmit(event: Gigya.PluginEventData)
   case onAfterSubmit(event: Gigya.PluginEventData)
@@ -376,6 +382,7 @@ public class GigyaAlertControllerUtils {
 public class GigyaConfig {
   public var apiKey: Swift.String?
   public var apiDomain: Swift.String
+  public var sessionVerificationInterval: Swift.Double?
   @objc deinit
 }
 public struct GigyaProfile : Swift.Codable {
@@ -700,6 +707,7 @@ public protocol SessionServiceProtocol {
   func setSession(_ model: Gigya.SessionInfoModel?)
   func getSession(completion: @escaping ((Swift.Bool) -> Swift.Void))
   func setSessionAs(biometric: Swift.Bool, completion: @escaping (Gigya.GigyaBiometricResult) -> Swift.Void)
+  var handlersAfterSetSession: Gigya.InterceptorsUtils { get }
   func clear()
   func clear(completion: @escaping () -> Swift.Void)
   func clearSession()
@@ -724,6 +732,10 @@ final public class GigyaCore<T> : Gigya.GigyaInstanceProtocol where T : Gigya.Gi
   final public func register(email: Swift.String, password: Swift.String, params: [Swift.String : Any], completion: @escaping (Gigya.GigyaLoginResult<T>) -> Swift.Void)
   final public func getAccount(_ clearAccount: Swift.Bool = false, completion: @escaping (Gigya.GigyaApiResult<T>) -> Swift.Void)
   final public func setAccount(with account: T, completion: @escaping (Gigya.GigyaApiResult<T>) -> Swift.Void)
+  final public func setAccount(with params: [Swift.String : Any], completion: @escaping (Gigya.GigyaApiResult<T>) -> Swift.Void)
+  final public func forgotPassword(loginId: Swift.String, completion: @escaping (Gigya.GigyaApiResult<Gigya.GigyaDictionary>) -> Swift.Void)
+  final public func forgotPassword(params: [Swift.String : Any], completion: @escaping (Gigya.GigyaApiResult<Gigya.GigyaDictionary>) -> Swift.Void)
+  final public func notifySocialLogin(params: [Swift.String : Any], completion: @escaping (Gigya.GigyaApiResult<T>) -> Swift.Void)
   final public func socialLoginWith(providers: [Gigya.GigyaSocialProviders], viewController: UIKit.UIViewController, params: [Swift.String : Any], completion: @escaping (Gigya.GigyaLoginResult<T>) -> Swift.Void)
   final public func addConnection(provider: Gigya.GigyaSocialProviders, viewController: UIKit.UIViewController, params: [Swift.String : Any], completion: @escaping (Gigya.GigyaApiResult<T>) -> Swift.Void)
   final public func removeConnection(provider: Gigya.GigyaSocialProviders, completion: @escaping (Gigya.GigyaApiResult<Gigya.GigyaDictionary>) -> Swift.Void)

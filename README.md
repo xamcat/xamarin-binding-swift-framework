@@ -72,10 +72,11 @@ As an example, in this tutorial we are going to bind the [Gigya Swift SDK](https
 
     ![xcode name framework project](SolutionItems/xcode-name-framework-project.png)
 
-1. Download the [Gigya framework](https://developers.gigya.com/display/GD/Swift+SDK) from the developer website and unpack it. At time of writing, the latest version is [Gigya Swift SDK 1.0.6](https://downloads.gigya.com/predownload?fileName=Gigya.swift.core.framework.1.0.6.zip)
-1. Rename the downloaded SDK file to **Gigya** ensuring that it ends with a **.framework** extension
+1. Download the [Gigya framework](https://developers.gigya.com/display/GD/Swift+SDK) from the developer website and unpack it. At time of writing, the latest version is [Gigya Swift SDK 1.0.9](https://downloads.gigya.com/predownload?fileName=Swift-Core-framework-1.0.9.zip)
+
 1. Select the **SwiftFrameworkProxy** from the project files explorer then select the General tab
-1. Drag and drop the Gigya.framework package to the Xcode Frameworks and Libraries list under the General tab check the "Copy items if needed" option while adding the framework.
+
+1. Drag and drop the **Gigya.framework** package to the Xcode Frameworks and Libraries list under the General tab check the "Copy items if needed" option while adding the framework.
 
     ![xcode copy framework](SolutionItems/xcode-copy-framework.png)
 
@@ -291,6 +292,22 @@ The next step is to create a Xamarin.iOS binding project using the Visual Studio
 
         If you have any additional linker flags to specify, set them in the linker flags field. In our case we keep it empty.
 
+    - Specify additional linker flags when needed. If the library you’re binding exposes only Objective-C APIs but internally is using Swift then you might be seeing issues like:
+
+        ```Console
+        error MT5209 : Native linking error : warning: Auto-Linking library not found for -lswiftCore
+        error MT5209 : Native linking error : warning: Auto-Linking library not found for -lswiftQuartzCore
+        error MT5209 : Native linking error : warning: Auto-Linking library not found for -lswiftCoreImage
+        ```
+
+        In the binding project's properties for the native library the following values must be added to Linker Flags:
+
+        ```Linker
+        L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/ -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos -Wl,-rpath -Wl,@executable_path/Frameworks
+        ```
+
+        The first two options (the `-L ...` ones) tell the native compiler where to find the swift libraries. The native compiler will ignore libraries that don't have the correct architecture, which means that it's possible to pass the location for both simulator libraries and device libraries at the same time, so that it works for both simulator and device builds (these paths are only correct for iOS; for tvOS and watchOS they have to be updated). One downside is that this approach requires that the correct Xcode is in /Application/Xcode.app, if the consumer of the binding library has Xcode in a different location, it won't work. The alternative solution is to add these options in the additional mtouch arguments in the executable project's iOS Build options (`"--gcc_flags -L... -L..."`). The third option makes the native linker store the location of the swift libraries in the executable, so that the OS can find them.
+
 1. The final action is to build the library and make sure you don't have any compilation errors. You will often find that bindings metadata produced by Objective Sharpie will be annotated with the `[Verify]` attribute. These attributes indicate that you should verify that Objective Sharpie did the correct thing by comparing the binding with the original Objective-C declaration (which will be provided in a comment above the bound declaration). You can learn more about members marked with the attribute by [the following link](https://docs.microsoft.com/en-us/xamarin/cross-platform/macios/binding/objective-sharpie/platform/verify). Once the project is built, it can be consumed by our Xamarin.iOS application.
 
 ### Step 4. Consume the binding library
@@ -317,13 +334,21 @@ The final step is to consume the Xamarin.iOS binding library in a Xamarin.iOS ap
     }
     ```
 
-1. Run the app, in the output you should see the following line:
+1. Create a button with a name `btnLogin` and add the following button click handler to activate an authentication flow:
 
-    ```console
-    Gigya initialized with domain: us1.gigya.com
+    ```csharp
+    private void btnLogin_Tap(object sender, EventArgs e)
+    {
+        _proxy.LoginWithProvider(GigyaSocialProvidersProxy.Instagram, this, (result, error) =>
+        {
+            // process your login result here
+        });
+    }
     ```
 
-     <img src='SolutionItems/swiftproxy-result.png' width='300px' alt='swiftproxy result'/>
+1. Run the app, in the debug output you should see the following line: `Gigya initialized with domain: us1.gigya.com`. Click the button to activate the authentication flow:
+
+    ![swiftproxy result](SolutionItems/swiftproxy-result.png)
 
 Congratulations! You have successfully created a Xamarin.iOS app and a binding library which consumes a Swift framework. The application above will successfully run on iOS 12.2+ because starting from this iOS version [Apple introduced ABI stability](https://swift.org/blog/swift-5-1-released/) and every iOS starting 12.2+ includes Swift runtime libraries which could be used to run your application compiled with Swift 5.1+. If you need to add support for earlier iOS versions, there are a few more steps to accomplish.
 
