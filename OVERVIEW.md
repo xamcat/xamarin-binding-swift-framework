@@ -33,9 +33,9 @@ The following guide outlines these steps with additional details.
 
 1. **Consuming the Xamarin Binding Library**
 
-    The forth and the final step is to reference the binding library in a Xamarin.iOS application. It is sufficient to enable the use of the native library within Xamarin.iOS applications targeting iOS 12.2 and above. For those applications targeting a lower version, some additional steps are required:
+    The fourth and final step is to reference the binding library in a Xamarin.iOS application. It is sufficient to enable the use of the native library within Xamarin.iOS applications targeting iOS 12.2 and above. For those applications targeting a lower version, some additional steps are required:
 
-    - Add Swift dylib dependencies for runtime support. Starting from iOS 12.2 and Swift 5.1, the language became ABI (application binary interface) stable and compatible. Thus any application targeting a lower iOS versions needs to include Swift dylibs dependencies used by the framework. Use the [SwiftRuntimeSupport Nuget package](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/) to automatically include required dylib dependencies into the resulting application package.
+    - Add Swift dylib dependencies for runtime support. Starting from iOS 12.2 and Swift 5.1, the language became ABI (application binary interface) stable and compatible. Thus any application targeting a lower iOS version needs to include Swift dylibs dependencies used by the framework. Use the [SwiftRuntimeSupport Nuget package](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/) to automatically include required dylib dependencies into the resulting application package.
 
     - Add `SwiftSupport` folder with signed dylibs, which is validated by the AppStore during uploading process. Using Xcode tools the package has to be signed and distributed to the AppStore connect, otherwise the package will be automatically rejected.
 
