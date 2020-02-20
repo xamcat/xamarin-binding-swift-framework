@@ -22,11 +22,4 @@ In order to build a fat framework, please run from the root of the repo the foll
 ./Swift/Scripts/build.fat.sh
 ```
 
-The output fat framework will be stored at the `Swift/VendorFrameworks/swift-framework-proxy/SwiftProxyFramework.framework`. The same file path is used at the Xamarin.iOS Binding project to package the Xamarin binding library:
-
-<img src="SolutionItems/swift-proxy-xamarin-binding-fat.png" alt="swift-proxy-xamarin-binding-fat.png" height="350" style="display:inline-block;" />
-
-## Demo
-
-| <img src="SolutionItems/swift-proxy-xamarin-binding-init.png" alt="swift-proxy-xamarin-binding-init" height="350" style="display:inline-block;" />  | <img src="SolutionItems/swift-proxy-xamarin-binding-login.png" alt="swift-proxy-xamarin-binding-login.png" height="350" style="display:inline-block;" />  | 
-|---|---|
+The output fat framework will be stored at the `Swift/VendorFrameworks/swift-framework-proxy/SwiftProxyFramework.framework`. The same file path is used at the Xamarin.iOS Binding project to package the Xamarin binding library.
