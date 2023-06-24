@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		53069FBE2347E08A00663A24 /* SwiftFrameworkProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 53069FBC2347E08A00663A24 /* SwiftFrameworkProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		53069FC52347E0AD00663A24 /* SwiftFrameworkProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53069FC42347E0AD00663A24 /* SwiftFrameworkProxy.swift */; };
 		537EADED235913200023A666 /* ModelProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537EADEC235913200023A666 /* ModelProxy.swift */; };
+		D30D43012A46A53F009C8BCF /* Gigya.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D30D43002A46A53F009C8BCF /* Gigya.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,7 +19,7 @@
 		53069FBD2347E08A00663A24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53069FC42347E0AD00663A24 /* SwiftFrameworkProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFrameworkProxy.swift; sourceTree = "<group>"; };
 		537EADEC235913200023A666 /* ModelProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProxy.swift; sourceTree = "<group>"; };
-		53D457AE23849FBB00D7A06F /* Gigya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gigya.framework; path = "../VendorFrameworks/gigya-swift-sdk/Gigya.framework"; sourceTree = "<group>"; };
+		D30D43002A46A53F009C8BCF /* Gigya.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Gigya.xcframework; path = "../VendorFrameworks/gigya-swift-sdk/Gigya.xcframework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D30D43012A46A53F009C8BCF /* Gigya.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +65,7 @@
 		53D457AD23849FBB00D7A06F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				53D457AE23849FBB00D7A06F /* Gigya.framework */,
+				D30D43002A46A53F009C8BCF /* Gigya.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -207,7 +209,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -264,7 +266,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -294,7 +296,7 @@
 				);
 				INFOPLIST_FILE = SwiftFrameworkProxy/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,7 +330,7 @@
 				);
 				INFOPLIST_FILE = SwiftFrameworkProxy/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
