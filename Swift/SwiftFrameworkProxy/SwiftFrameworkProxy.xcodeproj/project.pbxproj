@@ -10,7 +10,6 @@
 		53069FBE2347E08A00663A24 /* SwiftFrameworkProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 53069FBC2347E08A00663A24 /* SwiftFrameworkProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		53069FC52347E0AD00663A24 /* SwiftFrameworkProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53069FC42347E0AD00663A24 /* SwiftFrameworkProxy.swift */; };
 		537EADED235913200023A666 /* ModelProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537EADEC235913200023A666 /* ModelProxy.swift */; };
-		53D457B12384A08D00D7A06F /* Gigya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53D457AE23849FBB00D7A06F /* Gigya.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53D457B12384A08D00D7A06F /* Gigya.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
