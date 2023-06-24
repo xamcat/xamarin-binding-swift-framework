@@ -1,0 +1,65 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios16.4-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SwiftFrameworkProxy
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+import Gigya
+import Swift
+@_exported import SwiftFrameworkProxy
+import UIKit
+import _Concurrency
+import _StringProcessing
+@objc(GigyaSocialProvidersProxy) public enum GigyaSocialProvidersProxy : Swift.Int {
+  case facebook
+  case google
+  case apple
+  case twitter
+  case yahoo
+  case line
+  case wechat
+  case amazon
+  case blogger
+  case foursquare
+  case instagram
+  case kakao
+  case linkedin
+  case livedoor
+  case messenger
+  case mixi
+  case naver
+  case netlog
+  case odnoklassniki
+  case paypaloauth
+  case tencentQq
+  case renren
+  case sinaWeibo
+  case spiceworks
+  case vkontakte
+  case wordpress
+  case xing
+  case yahooJapan
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc(GigyaAccountProxy) public class GigyaAccountProxy : ObjectiveC.NSObject {
+  @objc public var lastLogin: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(NetworkErrorProxy) public class NetworkErrorProxy : ObjectiveC.NSObject {
+  @objc public var errorMessage: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(SwiftFrameworkProxy) public class SwiftFrameworkProxy : ObjectiveC.NSObject {
+  @objc public func initFor(apiKey: Swift.String) -> Swift.String
+  @objc public func login(provider: SwiftFrameworkProxy.GigyaSocialProvidersProxy, viewController: UIKit.UIViewController, completion: @escaping (SwiftFrameworkProxy.GigyaAccountProxy?, SwiftFrameworkProxy.NetworkErrorProxy?) -> Swift.Void)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension SwiftFrameworkProxy.GigyaSocialProvidersProxy : Swift.Equatable {}
+extension SwiftFrameworkProxy.GigyaSocialProvidersProxy : Swift.Hashable {}
+extension SwiftFrameworkProxy.GigyaSocialProvidersProxy : Swift.RawRepresentable {}

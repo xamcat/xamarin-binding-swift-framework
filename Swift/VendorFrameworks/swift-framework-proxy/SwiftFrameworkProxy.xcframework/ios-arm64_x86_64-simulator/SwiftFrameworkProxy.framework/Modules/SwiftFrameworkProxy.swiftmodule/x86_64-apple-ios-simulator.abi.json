@@ -1,0 +1,2373 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SwiftFrameworkProxy",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Gigya",
+        "printedName": "Gigya",
+        "declKind": "Import",
+        "moduleName": "SwiftFrameworkProxy"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GigyaSocialProvidersProxy",
+        "printedName": "GigyaSocialProvidersProxy",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "facebook",
+            "printedName": "facebook",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyFacebook",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O8facebookyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "google",
+            "printedName": "google",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyGoogle",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O6googleyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "apple",
+            "printedName": "apple",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyApple",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O5appleyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "twitter",
+            "printedName": "twitter",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyTwitter",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O7twitteryA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Var",
+            "name": "yahoo",
+            "printedName": "yahoo",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyYahoo",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O5yahooyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 4
+          },
+          {
+            "kind": "Var",
+            "name": "line",
+            "printedName": "line",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyLine",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O4lineyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 5
+          },
+          {
+            "kind": "Var",
+            "name": "wechat",
+            "printedName": "wechat",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyWechat",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O6wechatyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 6
+          },
+          {
+            "kind": "Var",
+            "name": "amazon",
+            "printedName": "amazon",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyAmazon",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O6amazonyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 7
+          },
+          {
+            "kind": "Var",
+            "name": "blogger",
+            "printedName": "blogger",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyBlogger",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O7bloggeryA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 8
+          },
+          {
+            "kind": "Var",
+            "name": "foursquare",
+            "printedName": "foursquare",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyFoursquare",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O10foursquareyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 9
+          },
+          {
+            "kind": "Var",
+            "name": "instagram",
+            "printedName": "instagram",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyInstagram",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O9instagramyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 10
+          },
+          {
+            "kind": "Var",
+            "name": "kakao",
+            "printedName": "kakao",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyKakao",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O5kakaoyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 11
+          },
+          {
+            "kind": "Var",
+            "name": "linkedin",
+            "printedName": "linkedin",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyLinkedin",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O8linkedinyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 12
+          },
+          {
+            "kind": "Var",
+            "name": "livedoor",
+            "printedName": "livedoor",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyLivedoor",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O8livedooryA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 13
+          },
+          {
+            "kind": "Var",
+            "name": "messenger",
+            "printedName": "messenger",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyMessenger",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O9messengeryA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 14
+          },
+          {
+            "kind": "Var",
+            "name": "mixi",
+            "printedName": "mixi",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyMixi",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O4mixiyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 15
+          },
+          {
+            "kind": "Var",
+            "name": "naver",
+            "printedName": "naver",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyNaver",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O5naveryA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 16
+          },
+          {
+            "kind": "Var",
+            "name": "netlog",
+            "printedName": "netlog",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyNetlog",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O6netlogyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 17
+          },
+          {
+            "kind": "Var",
+            "name": "odnoklassniki",
+            "printedName": "odnoklassniki",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyOdnoklassniki",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O13odnoklassnikiyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 18
+          },
+          {
+            "kind": "Var",
+            "name": "paypaloauth",
+            "printedName": "paypaloauth",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyPaypaloauth",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O11paypaloauthyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 19
+          },
+          {
+            "kind": "Var",
+            "name": "tencentQq",
+            "printedName": "tencentQq",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyTencentQq",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O9tencentQqyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 20
+          },
+          {
+            "kind": "Var",
+            "name": "renren",
+            "printedName": "renren",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyRenren",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O6renrenyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 21
+          },
+          {
+            "kind": "Var",
+            "name": "sinaWeibo",
+            "printedName": "sinaWeibo",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxySinaWeibo",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O9sinaWeiboyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 22
+          },
+          {
+            "kind": "Var",
+            "name": "spiceworks",
+            "printedName": "spiceworks",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxySpiceworks",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O10spiceworksyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 23
+          },
+          {
+            "kind": "Var",
+            "name": "vkontakte",
+            "printedName": "vkontakte",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyVkontakte",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O9vkontakteyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 24
+          },
+          {
+            "kind": "Var",
+            "name": "wordpress",
+            "printedName": "wordpress",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyWordpress",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O9wordpressyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 25
+          },
+          {
+            "kind": "Var",
+            "name": "xing",
+            "printedName": "xing",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyXing",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O4xingyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 26
+          },
+          {
+            "kind": "Var",
+            "name": "yahooJapan",
+            "printedName": "yahooJapan",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type) -> SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "GigyaSocialProvidersProxy",
+                        "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy@GigyaSocialProvidersProxyYahooJapan",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O10yahooJapanyA2CmF",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 27
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "GigyaSocialProvidersProxy",
+                    "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                    "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:19SwiftFrameworkProxy020GigyaSocialProvidersC0O8rawValueACSgSi_tcfc",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O8rawValueACSgSi_tcfc",
+            "moduleName": "SwiftFrameworkProxy",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:19SwiftFrameworkProxy020GigyaSocialProvidersC0O8rawValueSivp",
+            "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O8rawValueSivp",
+            "moduleName": "SwiftFrameworkProxy",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19SwiftFrameworkProxy020GigyaSocialProvidersC0O8rawValueSivg",
+                "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O8rawValueSivg",
+                "moduleName": "SwiftFrameworkProxy",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy",
+        "mangledName": "$s19SwiftFrameworkProxy020GigyaSocialProvidersC0O",
+        "moduleName": "SwiftFrameworkProxy",
+        "objc_name": "GigyaSocialProvidersProxy",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "GigyaAccountProxy",
+        "printedName": "GigyaAccountProxy",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "lastLogin",
+            "printedName": "lastLogin",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@SwiftFrameworkProxy@objc(cs)GigyaAccountProxy(py)lastLogin",
+            "mangledName": "$s19SwiftFrameworkProxy012GigyaAccountC0C9lastLoginSSSgvp",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SwiftFrameworkProxy@objc(cs)GigyaAccountProxy(im)lastLogin",
+                "mangledName": "$s19SwiftFrameworkProxy012GigyaAccountC0C9lastLoginSSSgvg",
+                "moduleName": "SwiftFrameworkProxy",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SwiftFrameworkProxy@objc(cs)GigyaAccountProxy(im)setLastLogin:",
+                "mangledName": "$s19SwiftFrameworkProxy012GigyaAccountC0C9lastLoginSSSgvs",
+                "moduleName": "SwiftFrameworkProxy",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19SwiftFrameworkProxy012GigyaAccountC0C9lastLoginSSSgvM",
+                "mangledName": "$s19SwiftFrameworkProxy012GigyaAccountC0C9lastLoginSSSgvM",
+                "moduleName": "SwiftFrameworkProxy",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "GigyaAccountProxy",
+                "printedName": "SwiftFrameworkProxy.GigyaAccountProxy",
+                "usr": "c:@M@SwiftFrameworkProxy@objc(cs)GigyaAccountProxy"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SwiftFrameworkProxy@objc(cs)GigyaAccountProxy(im)init",
+            "mangledName": "$s19SwiftFrameworkProxy012GigyaAccountC0CACycfc",
+            "moduleName": "SwiftFrameworkProxy",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@SwiftFrameworkProxy@objc(cs)GigyaAccountProxy",
+        "mangledName": "$s19SwiftFrameworkProxy012GigyaAccountC0C",
+        "moduleName": "SwiftFrameworkProxy",
+        "objc_name": "GigyaAccountProxy",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "NetworkErrorProxy",
+        "printedName": "NetworkErrorProxy",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "errorMessage",
+            "printedName": "errorMessage",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@SwiftFrameworkProxy@objc(cs)NetworkErrorProxy(py)errorMessage",
+            "mangledName": "$s19SwiftFrameworkProxy012NetworkErrorC0C12errorMessageSSSgvp",
+            "moduleName": "SwiftFrameworkProxy",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SwiftFrameworkProxy@objc(cs)NetworkErrorProxy(im)errorMessage",
+                "mangledName": "$s19SwiftFrameworkProxy012NetworkErrorC0C12errorMessageSSSgvg",
+                "moduleName": "SwiftFrameworkProxy",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@SwiftFrameworkProxy@objc(cs)NetworkErrorProxy(im)setErrorMessage:",
+                "mangledName": "$s19SwiftFrameworkProxy012NetworkErrorC0C12errorMessageSSSgvs",
+                "moduleName": "SwiftFrameworkProxy",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:19SwiftFrameworkProxy012NetworkErrorC0C12errorMessageSSSgvM",
+                "mangledName": "$s19SwiftFrameworkProxy012NetworkErrorC0C12errorMessageSSSgvM",
+                "moduleName": "SwiftFrameworkProxy",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NetworkErrorProxy",
+                "printedName": "SwiftFrameworkProxy.NetworkErrorProxy",
+                "usr": "c:@M@SwiftFrameworkProxy@objc(cs)NetworkErrorProxy"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SwiftFrameworkProxy@objc(cs)NetworkErrorProxy(im)init",
+            "mangledName": "$s19SwiftFrameworkProxy012NetworkErrorC0CACycfc",
+            "moduleName": "SwiftFrameworkProxy",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@SwiftFrameworkProxy@objc(cs)NetworkErrorProxy",
+        "mangledName": "$s19SwiftFrameworkProxy012NetworkErrorC0C",
+        "moduleName": "SwiftFrameworkProxy",
+        "objc_name": "NetworkErrorProxy",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SwiftFrameworkProxy",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SwiftFrameworkProxy"
+      },
+      {
+        "kind": "Import",
+        "name": "Gigya",
+        "printedName": "Gigya",
+        "declKind": "Import",
+        "moduleName": "SwiftFrameworkProxy"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SwiftFrameworkProxy",
+        "printedName": "SwiftFrameworkProxy",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "initFor",
+            "printedName": "initFor(apiKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@SwiftFrameworkProxy@objc(cs)SwiftFrameworkProxy(im)initForApiKey:",
+            "mangledName": "$s19SwiftFrameworkProxyAAC7initFor6apiKeyS2S_tF",
+            "moduleName": "SwiftFrameworkProxy",
+            "objc_name": "initForApiKey:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "login",
+            "printedName": "login(provider:viewController:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GigyaSocialProvidersProxy",
+                "printedName": "SwiftFrameworkProxy.GigyaSocialProvidersProxy",
+                "usr": "c:@M@SwiftFrameworkProxy@E@GigyaSocialProvidersProxy"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(SwiftFrameworkProxy.GigyaAccountProxy?, SwiftFrameworkProxy.NetworkErrorProxy?) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(SwiftFrameworkProxy.GigyaAccountProxy?, SwiftFrameworkProxy.NetworkErrorProxy?)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "SwiftFrameworkProxy.GigyaAccountProxy?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "GigyaAccountProxy",
+                            "printedName": "SwiftFrameworkProxy.GigyaAccountProxy",
+                            "usr": "c:@M@SwiftFrameworkProxy@objc(cs)GigyaAccountProxy"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Optional",
+                        "printedName": "SwiftFrameworkProxy.NetworkErrorProxy?",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "NetworkErrorProxy",
+                            "printedName": "SwiftFrameworkProxy.NetworkErrorProxy",
+                            "usr": "c:@M@SwiftFrameworkProxy@objc(cs)NetworkErrorProxy"
+                          }
+                        ],
+                        "usr": "s:Sq"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@SwiftFrameworkProxy@objc(cs)SwiftFrameworkProxy(im)loginWithProvider:viewController:completion:",
+            "mangledName": "$s19SwiftFrameworkProxyAAC5login8provider14viewController10completionyAA020GigyaSocialProvidersC0O_So06UIViewG0CyAA0i7AccountC0CSg_AA012NetworkErrorC0CSgtctF",
+            "moduleName": "SwiftFrameworkProxy",
+            "objc_name": "loginWithProvider:viewController:completion:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "SwiftFrameworkProxy",
+                "printedName": "SwiftFrameworkProxy.SwiftFrameworkProxy",
+                "usr": "c:@M@SwiftFrameworkProxy@objc(cs)SwiftFrameworkProxy"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@SwiftFrameworkProxy@objc(cs)SwiftFrameworkProxy(im)init",
+            "mangledName": "$s19SwiftFrameworkProxyAACABycfc",
+            "moduleName": "SwiftFrameworkProxy",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@SwiftFrameworkProxy@objc(cs)SwiftFrameworkProxy",
+        "mangledName": "$s19SwiftFrameworkProxyAAC",
+        "moduleName": "SwiftFrameworkProxy",
+        "objc_name": "SwiftFrameworkProxy",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 283,
+      "length": 6,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 299,
+      "length": 5,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 314,
+      "length": 7,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 331,
+      "length": 5,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 346,
+      "length": 4,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 360,
+      "length": 6,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 376,
+      "length": 6,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 392,
+      "length": 7,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 409,
+      "length": 10,
+      "value": "9"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 429,
+      "length": 9,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 448,
+      "length": 5,
+      "value": "11"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 463,
+      "length": 8,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 481,
+      "length": 8,
+      "value": "13"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 499,
+      "length": 9,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 518,
+      "length": 4,
+      "value": "15"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 532,
+      "length": 5,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 547,
+      "length": 6,
+      "value": "17"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 563,
+      "length": 13,
+      "value": "18"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 586,
+      "length": 11,
+      "value": "19"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 607,
+      "length": 9,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 626,
+      "length": 6,
+      "value": "21"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 642,
+      "length": 9,
+      "value": "22"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 661,
+      "length": 10,
+      "value": "23"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 681,
+      "length": 9,
+      "value": "24"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 700,
+      "length": 9,
+      "value": "25"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 719,
+      "length": 4,
+      "value": "26"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 733,
+      "length": 10,
+      "value": "27"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 283,
+      "length": 6,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 299,
+      "length": 5,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 314,
+      "length": 7,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 331,
+      "length": 5,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 346,
+      "length": 4,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 360,
+      "length": 6,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 376,
+      "length": 6,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 392,
+      "length": 7,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 409,
+      "length": 10,
+      "value": "9"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 429,
+      "length": 9,
+      "value": "10"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 448,
+      "length": 5,
+      "value": "11"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 463,
+      "length": 8,
+      "value": "12"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 481,
+      "length": 8,
+      "value": "13"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 499,
+      "length": 9,
+      "value": "14"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 518,
+      "length": 4,
+      "value": "15"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 532,
+      "length": 5,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 547,
+      "length": 6,
+      "value": "17"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 563,
+      "length": 13,
+      "value": "18"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 586,
+      "length": 11,
+      "value": "19"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 607,
+      "length": 9,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 626,
+      "length": 6,
+      "value": "21"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 642,
+      "length": 9,
+      "value": "22"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 661,
+      "length": 10,
+      "value": "23"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 681,
+      "length": 9,
+      "value": "24"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 700,
+      "length": 9,
+      "value": "25"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 719,
+      "length": 4,
+      "value": "26"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "IntegerLiteral",
+      "offset": 733,
+      "length": 10,
+      "value": "27"
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "StringLiteral",
+      "offset": 4883,
+      "length": 13,
+      "value": "\"empty error\""
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/ModelProxy.swift",
+      "kind": "StringLiteral",
+      "offset": 5159,
+      "length": 27,
+      "value": "\"create URL Request Failed\""
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/SwiftFrameworkProxy.swift",
+      "kind": "StringLiteral",
+      "offset": 480,
+      "length": 47,
+      "value": "\"Gigya initialized with domain: \""
+    },
+    {
+      "filePath": "\/Users\/brian\/Documents\/SourceCode\/xamarin-binding-swift-framework\/Swift\/SwiftFrameworkProxy\/SwiftFrameworkProxy\/SwiftFrameworkProxy.swift",
+      "kind": "StringLiteral",
+      "offset": 526,
+      "length": 1,
+      "value": "\"\""
+    }
+  ]
+}
