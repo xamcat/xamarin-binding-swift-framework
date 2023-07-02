@@ -1,0 +1,1001 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8 (swiftlang-5.8.0.124.2 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios11.3 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Gigya
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AuthenticationServices
+import CommonCrypto
+import CryptoKit
+import Foundation
+import NotificationCenter
+import Swift
+import UIKit
+import UserNotifications
+import WebKit
+import _Concurrency
+import _StringProcessing
+@_hasMissingDesignatedInitializers public class GeneralUtils {
+  public func iosVersion() -> Swift.String
+  public func showNotification(title: Swift.String, body: Swift.String, id: Swift.String, userInfo: [Swift.AnyHashable : Any] = [:])
+  public func getTopViewController() -> UIKit.UIViewController?
+  public func show(vc: UIKit.UIViewController, title: Swift.String, message: Swift.String, result: @escaping (Swift.Bool) -> Swift.Void)
+  @objc deinit
+}
+public protocol ResolverProtocol {
+  func resolve<Service>(_ serviceType: Service.Type) -> Service?
+}
+@_hasMissingDesignatedInitializers public class WebAuthnService<T> where T : GigyaAccountProtocol {
+  public var isSupported: Swift.Bool {
+    get
+  }
+  #if compiler(>=5.3) && $AsyncAwait
+  @available(iOS 16.0.0, *)
+  public func register(viewController: UIKit.UIViewController) async -> GigyaApiResult<GigyaDictionary>
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @available(iOS 16.0.0, *)
+  public func login(viewController: UIKit.UIViewController, params: [Swift.String : Any] = [:]) async -> GigyaLoginResult<T>
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  @available(iOS 16.0.0, *)
+  @discardableResult
+  public func revoke() async -> GigyaApiResult<GigyaDictionary>
+  #endif
+  public func passkeyForUser(uid: Swift.String?) -> Swift.Bool
+  @objc deinit
+}
+public struct ApiRequestModel {
+  public let method: Swift.String
+  public var params: [Swift.String : Any]?
+  public var headers: [Swift.String : Swift.String]?
+  public let isAnonymous: Swift.Bool
+  public init(method: Swift.String, params: [Swift.String : Any]? = [:], isAnonymous: Swift.Bool = false, config: GigyaConfig? = nil)
+}
+public typealias ResolverHandling<T> = (any ResolverProtocol) -> T
+@_hasMissingDesignatedInitializers public class IOCContainer {
+  public func register<Service>(service: Service.Type, isSingleton: Swift.Bool = false, factory: @escaping ResolverHandling<Service>)
+  @objc deinit
+}
+extension IOCContainer : ResolverProtocol {
+  public func resolve<Service>(_ serviceType: Service.Type) -> Service?
+}
+@_hasMissingDesignatedInitializers final public class ReportingService {
+  @objc deinit
+}
+@frozen public enum GigyaApiResult<ResponseType> {
+  case success(data: ResponseType)
+  case failure(_: NetworkError)
+}
+public struct LoginApiError<T> where T : GigyaAccountProtocol {
+  public let error: NetworkError
+  public let interruption: GigyaInterruptions<T>?
+  public init(error: NetworkError, interruption: GigyaInterruptions<T>? = nil)
+}
+@frozen public enum GigyaLoginResult<ResponseType> where ResponseType : GigyaAccountProtocol {
+  case success(data: ResponseType)
+  case failure(LoginApiError<ResponseType>)
+}
+@frozen public enum GigyaInterruptions<T> where T : GigyaAccountProtocol {
+  case pendingRegistration(resolver: PendingRegistrationResolver<T>)
+  case pendingVerification(regToken: Swift.String)
+  case pendingPasswordChange(regToken: Swift.String)
+  case conflitingAccount(resolver: LinkAccountsResolver<T>)
+  case pendingTwoFactorRegistration(response: GigyaResponseModel, inactiveProviders: [TFAProviderModel]?, factory: TFAResolverFactory<T>)
+  case pendingTwoFactorVerification(response: GigyaResponseModel, activeProviders: [TFAProviderModel]?, factory: TFAResolverFactory<T>)
+}
+@frozen public enum GigyaBiometricResult {
+  case success
+  case failure
+  public static func == (a: GigyaBiometricResult, b: GigyaBiometricResult) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers open class TFAResolver<T> : Resolver<T> where T : GigyaAccountProtocol {
+  public var gigyaAssertion: Swift.String?
+  required public init(businessApiDelegate: any BusinessApiDelegate, interruption: GigyaResponseModel, completionHandler: @escaping (GigyaLoginResult<T>) -> Swift.Void)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class GigyaWebBridge<T> : ObjectiveC.NSObject, WebKit.WKScriptMessageHandler where T : GigyaAccountProtocol {
+  final public func attachTo(webView: WebKit.WKWebView, viewController: UIKit.UIViewController, pluginEvent: @escaping (GigyaPluginEvent<T>) -> Swift.Void)
+  @objc final public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+  final public func webView(_ webView: WebKit.WKWebView, runJavaScriptAlertPanelWithMessage message: Swift.String, initiatedByFrame frame: WebKit.WKFrameInfo, completionHandler: @escaping () -> Swift.Void)
+  @objc deinit
+}
+public protocol GigyaAccountProtocol : Swift.Decodable, Swift.Encodable {
+  var UID: Swift.String? { get set }
+  var profile: GigyaProfile? { get set }
+  var UIDSignature: Swift.String? { get set }
+  var apiVersion: Swift.Int? { get set }
+  var created: Swift.String? { get set }
+  var createdTimestamp: Swift.Double? { get set }
+  var isActive: Swift.Bool? { get set }
+  var isRegistered: Swift.Bool? { get set }
+  var isVerified: Swift.Bool? { get set }
+  var lastLogin: Swift.String? { get set }
+  var lastLoginTimestamp: Swift.Double? { get set }
+  var lastUpdated: Swift.String? { get set }
+  var lastUpdatedTimestamp: Swift.Double? { get set }
+  var loginProvider: Swift.String? { get set }
+  var oldestDataUpdated: Swift.String? { get set }
+  var oldestDataUpdatedTimestamp: Swift.Double? { get set }
+  var registered: Swift.String? { get set }
+  var registeredTimestamp: Swift.Double? { get set }
+  var signatureTimestamp: Swift.String? { get set }
+  var socialProviders: Swift.String? { get set }
+  var verified: Swift.String? { get set }
+  var verifiedTimestamp: Swift.Double? { get set }
+}
+public struct GigyaDataDefault : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GigyaAccount : GigyaAccountProtocol {
+  public var UID: Swift.String?
+  public var profile: GigyaProfile?
+  public var UIDSignature: Swift.String?
+  public var apiVersion: Swift.Int?
+  public var created: Swift.String?
+  public var createdTimestamp: Swift.Double?
+  public var isActive: Swift.Bool?
+  public var isRegistered: Swift.Bool?
+  public var isVerified: Swift.Bool?
+  public var lastLogin: Swift.String?
+  public var lastLoginTimestamp: Swift.Double?
+  public var lastUpdated: Swift.String?
+  public var lastUpdatedTimestamp: Swift.Double?
+  public var loginProvider: Swift.String?
+  public var oldestDataUpdated: Swift.String?
+  public var oldestDataUpdatedTimestamp: Swift.Double?
+  public var registered: Swift.String?
+  public var registeredTimestamp: Swift.Double?
+  public var signatureTimestamp: Swift.String?
+  public var socialProviders: Swift.String?
+  public var verified: Swift.String?
+  public var verifiedTimestamp: Swift.Double?
+  public let data: GigyaDataDefault?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public protocol GigyaInstanceProtocol {
+}
+public typealias GigyaDictionary = [Swift.String : AnyCodable]
+@frozen public enum PushNotificationModes : Swift.String {
+  case optin
+  case verify
+  case cancel
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class LinkAccountsResolver<T> where T : GigyaAccountProtocol {
+  final public var conflictingAccount: ConflictingAccount?
+  final public func linkToSite(loginId: Swift.String, password: Swift.String)
+  final public func linkToSocial(provider: GigyaSocialProviders, viewController: UIKit.UIViewController)
+  @objc deinit
+}
+public struct GigyaAccountConfig : Swift.Decodable {
+  public var cacheTime: Swift.Int?
+  public var include: [Swift.String]?
+  public var extraProfileFields: [Swift.String]?
+  public init(cacheTime: Swift.Int = 0, include: [Swift.String] = [], extraProfileFields: [Swift.String] = [])
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers public class InterceptorsUtils {
+  @objc deinit
+}
+@frozen public enum GigyaResult<Response> {
+  case success(data: Response)
+  case failure(NetworkError)
+}
+@objc(GSSession) public class GigyaSession : ObjectiveC.NSObject, Foundation.NSSecureCoding {
+  @objc public static var supportsSecureCoding: Swift.Bool
+  public var token: Swift.String
+  public var secret: Swift.String
+  public var sessionExpirationTimestamp: Swift.Double?
+  public init?(sessionToken token: Swift.String, secret: Swift.String, expiration: Swift.Double? = nil)
+  @objc public func encode(with aCoder: Foundation.NSCoder)
+  @objc required public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+public enum ApiStatusCode : Swift.Int {
+  case success
+  case unknown
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension ApiStatusCode : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum Interruption : Swift.Int, Swift.CaseIterable {
+  case pendingRegistration
+  case pendingVerification
+  case conflitingAccounts
+  case pendingTwoFactorRegistration
+  case pendingTwoFactorVerification
+  case accountLinked
+  case pendingPasswordChange
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [Interruption]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [Interruption] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class DecodeEncodeUtils {
+  public static func decode<T>(fromType: T.Type, data: Foundation.Data) throws -> T where T : Swift.Decodable, T : Swift.Encodable
+  @objc deinit
+}
+public protocol BiometricServiceProtocol {
+  var isLocked: Swift.Bool { get }
+  var isOptIn: Swift.Bool { get }
+  func optIn(completion: @escaping (GigyaBiometricResult) -> Swift.Void)
+  func optOut(completion: @escaping (GigyaBiometricResult) -> Swift.Void)
+  func unlockSession(completion: @escaping (GigyaBiometricResult) -> Swift.Void)
+  func lockSession(completion: @escaping (GigyaBiometricResult) -> Swift.Void)
+}
+public struct GigyaResponseModel : Swift.Codable {
+  public var statusCode: ApiStatusCode
+  public var errorCode: Swift.Int
+  public var callId: Swift.String
+  public let errorMessage: Swift.String?
+  public func toDictionary() -> [Swift.String : Any]
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public typealias RemoteMsgClosure = ([Swift.AnyHashable : Any]) -> ()
+public protocol PushNotificationsServiceExternalProtocol {
+  func getPushToken() -> Swift.String?
+  func registerTo(key: Swift.String, closure: @escaping RemoteMsgClosure)
+  func registerForPushNotifications(compilation: @escaping (_ success: Swift.Bool) -> ())
+  func getNotificationSettings(_ compilation: @escaping (_ success: Swift.Bool) -> ())
+}
+@_hasMissingDesignatedInitializers final public class PersistenceService {
+  final public var webAuthnlist: [GigyaWebAuthnCredential] {
+    get
+  }
+  @objc deinit
+}
+public struct TFAProviderModel : Swift.Codable {
+  public let name: TFAProvider
+  public let authLevel: Swift.Int?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TFAProvidersModel : Swift.Codable {
+  public let activeProviders: [TFAProviderModel]?
+  public let inactiveProviders: [TFAProviderModel]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct InitTFAModel : Swift.Codable {
+  public let gigyaAssertion: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TFAVerificationCodeModel : Swift.Codable {
+  public let phvToken: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TFACompleteVerificationModel : Swift.Codable {
+  public let providerAssertion: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TFARegisteredPhone : Swift.Codable {
+  public let id: Swift.String?
+  public let obfuscated: Swift.String?
+  public let lastMethod: Swift.String?
+  public let lastVerification: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TFAGetRegisteredPhoneNumbersModel : Swift.Codable {
+  public let phones: [TFARegisteredPhone]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TFAEmail : Swift.Codable {
+  public let id: Swift.String?
+  public let obfuscated: Swift.String?
+  public let lastVerification: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TFAEmailsModel : Swift.Codable {
+  public let emails: [TFAEmail]?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct TFATotpRegisterModel : Swift.Codable {
+  public let qrCode: Swift.String?
+  public let sctToken: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum TFAMode : Swift.String {
+  case register
+  case verify
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum TFAPhoneMethod : Swift.String {
+  case sms
+  case voice
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+open class Resolver<T> where T : GigyaAccountProtocol {
+  public var regToken: Swift.String {
+    get
+  }
+  required public init(businessApiDelegate: any BusinessApiDelegate, interruption: GigyaResponseModel, completionHandler: @escaping (GigyaLoginResult<T>) -> Swift.Void)
+  @objc deinit
+}
+public typealias PluginEventData = [Swift.String : Any]
+public enum GigyaPluginEvent<T> where T : GigyaAccountProtocol {
+  case onBeforeValidation(event: PluginEventData)
+  case onAfterValidation(event: PluginEventData)
+  case onBeforeSubmit(event: PluginEventData)
+  case onSubmit(event: PluginEventData)
+  case onAfterSubmit(event: PluginEventData)
+  case onBeforeScreenLoad(event: PluginEventData)
+  case onAfterScreenLoad(event: PluginEventData)
+  case onFieldChanged(event: PluginEventData)
+  case onHide(event: PluginEventData)
+  case onLogin(account: T)
+  case onLogout
+  case onConnectionAdded
+  case onConnectionRemoved
+  case onCanceled
+  case error(event: PluginEventData)
+}
+public struct AnyCodable {
+  public let value: Any
+  public init<T>(_ value: T?)
+}
+extension AnyCodable : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension AnyCodable : Swift.Equatable {
+  public static func == (lhs: AnyCodable, rhs: AnyCodable) -> Swift.Bool
+}
+extension AnyCodable : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension AnyCodable : Swift.CustomDebugStringConvertible {
+  public var debugDescription: Swift.String {
+    get
+  }
+}
+extension AnyCodable : Swift.ExpressibleByNilLiteral, Swift.ExpressibleByBooleanLiteral, Swift.ExpressibleByIntegerLiteral, Swift.ExpressibleByFloatLiteral, Swift.ExpressibleByStringLiteral, Swift.ExpressibleByArrayLiteral, Swift.ExpressibleByDictionaryLiteral {
+  public init(nilLiteral: ())
+  public init(booleanLiteral value: Swift.Bool)
+  public init(integerLiteral value: Swift.Int)
+  public init(floatLiteral value: Swift.Double)
+  public init(extendedGraphemeClusterLiteral value: Swift.String)
+  public init(stringLiteral value: Swift.String)
+  public init(arrayLiteral elements: Any...)
+  public init(dictionaryLiteral elements: (Swift.AnyHashable, Any)...)
+  public typealias ArrayLiteralElement = Any
+  public typealias BooleanLiteralType = Swift.Bool
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias FloatLiteralType = Swift.Double
+  public typealias IntegerLiteralType = Swift.Int
+  public typealias Key = Swift.AnyHashable
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+  public typealias Value = Any
+}
+public protocol AccountServiceProtocol : AnyObject {
+  var account: Any? { get set }
+  var accountCacheTime: Swift.Int { get set }
+  func getAccount<T>() -> T where T : Swift.Decodable, T : Swift.Encodable
+  func setAccount<T>(newAccount: T) -> [Swift.String : Swift.AnyObject] where T : Swift.Decodable, T : Swift.Encodable
+  func isCachedAccount() -> Swift.Bool
+  func clear()
+}
+public protocol ApiServiceProtocol {
+  init(with requst: any NetworkAdapterProtocol, session: any SessionServiceProtocol, persistenceService: PersistenceService, reportingService: ReportingService)
+  func sendBlocking<T>(model: ApiRequestModel, responseType: T.Type, completion: @escaping (GigyaApiResult<T>) -> Swift.Void) where T : Swift.Decodable, T : Swift.Encodable
+  func send<T>(model: ApiRequestModel, responseType: T.Type, completion: @escaping (GigyaApiResult<T>) -> Swift.Void) where T : Swift.Decodable, T : Swift.Encodable
+  func getSDKConfig()
+}
+@frozen public enum TFAProvider : Swift.String, Swift.Codable {
+  case phone
+  case liveLink
+  case email
+  case totp
+  case push
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class GigyaAlertControllerUtils {
+  public static func show(vc: UIKit.UIViewController, title: Swift.String, message: Swift.String, result: @escaping (Swift.Bool) -> Swift.Void)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class GigyaConfig {
+  public var apiKey: Swift.String?
+  public var apiDomain: Swift.String {
+    get
+    set
+  }
+  public var cname: Swift.String? {
+    get
+    set
+  }
+  public var cnameEnable: Swift.Bool {
+    get
+  }
+  public var sessionVerificationInterval: Swift.Double?
+  @objc deinit
+}
+public struct GigyaProfile : Swift.Codable {
+  public var firstName: Swift.String?
+  public var lastName: Swift.String?
+  public var nickname: Swift.String?
+  public var address: Swift.String?
+  public var age: Swift.Int?
+  public var bio: Swift.String?
+  public var birthDay: Swift.Int?
+  public var birthMonth: Swift.Int?
+  public var birthYear: Swift.Int?
+  public var capabilities: Swift.String?
+  public var certifications: [GigyaProfile.Certification]?
+  public var city: Swift.String?
+  public var country: Swift.String?
+  public var education: [GigyaProfile.UserEducation]?
+  public var educationLevel: Swift.String?
+  public var email: Swift.String?
+  public var favorites: GigyaProfile.UserFavorites?
+  public var followersCount: Swift.Int?
+  public var followingCount: Swift.Int?
+  public var gender: Swift.String?
+  public var hometown: Swift.String?
+  public var honors: Swift.String?
+  public var identities: [GigyaProfile.ProviderIdentity]?
+  public var industry: Swift.String?
+  public var interestedIn: Swift.String?
+  public var interests: Swift.String?
+  public var isConnected: Swift.Bool?
+  public var iRank: Swift.Int?
+  public var isSiteUID: Swift.Bool?
+  public var isSiteUser: Swift.Bool?
+  public var languages: Swift.String?
+  public var likes: [GigyaProfile.UserLike]?
+  public var locale: Swift.String?
+  public var name: Swift.String?
+  public var oldestDataAge: Swift.Int?
+  public var oldestDataUpdatedTimestamp: Swift.Int?
+  public var patents: [GigyaProfile.UserPatent]?
+  public var phones: [GigyaProfile.UserPhone]?
+  public var photoURL: Swift.String?
+  public var providers: Swift.String?
+  public var publications: [GigyaProfile.UserPublication]?
+  public var relationshipStatus: Swift.String?
+  public var religion: Swift.String?
+  public var samlData: GigyaProfile.UserSamlData?
+  public var skills: [GigyaProfile.UserSkill]?
+  public var specialities: Swift.String?
+  public var state: Swift.String?
+  public var timezone: Swift.String?
+  public var thumbnailURL: Swift.String?
+  public var username: Swift.String?
+  public var isVerified: Swift.Bool?
+  public var verified: Swift.String?
+  public var verifiedTimestamp: Swift.Int?
+  public var work: [GigyaProfile.UserWork]?
+  public var zip: Swift.String?
+  public init(from decoder: any Swift.Decoder) throws
+  public struct Certification : Swift.Codable {
+    public var name: Swift.String?
+    public var authority: Swift.String?
+    public var number: Swift.String?
+    public var startDate: Swift.String?
+    public var endDate: Swift.String?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct UserEducation : Swift.Codable {
+    public var school: Swift.String?
+    public var schoolType: Swift.String?
+    public var fieldOfStudy: Swift.String?
+    public var degree: Swift.String?
+    public var startYear: Swift.Int?
+    public var endYear: Swift.Int?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct UserFavorite : Swift.Codable {
+    public var id: Swift.String?
+    public var name: Swift.String?
+    public var category: Swift.String?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct UserFavorites : Swift.Codable {
+    public var interests: [GigyaProfile.UserFavorite]?
+    public var activities: [GigyaProfile.UserFavorite]?
+    public var books: [GigyaProfile.UserFavorite]?
+    public var music: [GigyaProfile.UserFavorite]?
+    public var movies: [GigyaProfile.UserFavorite]?
+    public var television: [GigyaProfile.UserFavorite]?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct ProviderIdentity : Swift.Codable {
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct UserLike : Swift.Codable {
+    public var name: Swift.String?
+    public var category: Swift.String?
+    public var id: Swift.String?
+    public var time: Swift.String?
+    public var timestamp: Swift.Int?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct UserPatent : Swift.Codable {
+    public var title: Swift.String?
+    public var summary: Swift.String?
+    public var number: Swift.String?
+    public var office: Swift.String?
+    public var status: Swift.String?
+    public var date: Swift.String?
+    public var url: Swift.String?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct UserPhone : Swift.Codable {
+    public var type: Swift.String?
+    public var number: Swift.String?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct UserPublication : Swift.Codable {
+    public var title: Swift.String?
+    public var summary: Swift.String?
+    public var publisher: Swift.String?
+    public var date: Swift.String?
+    public var url: Swift.String?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct UserSamlData : Swift.Codable {
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct UserSkill : Swift.Codable {
+    public var skill: Swift.String?
+    public var level: Swift.String?
+    public var years: Swift.String?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct UserWork : Swift.Codable {
+    public var company: Swift.String?
+    public var companyID: Swift.String?
+    public var title: Swift.String?
+    public var companySize: Swift.String?
+    public var startDate: Swift.String?
+    public var endDate: Swift.String?
+    public var industry: Swift.String?
+    public var isCurrent: Swift.Bool?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+public protocol BusinessApiDelegate : AnyObject {
+  func sendApi(api: Swift.String, params: [Swift.String : Any], completion: @escaping (GigyaApiResult<GigyaDictionary>) -> Swift.Void)
+  func sendApi<T>(dataType: T.Type, api: Swift.String, params: [Swift.String : Any], completion: @escaping (GigyaApiResult<T>) -> Swift.Void) where T : Swift.Decodable, T : Swift.Encodable
+  func callSetAccount<T>(dataType: T.Type, params: [Swift.String : Any], completion: @escaping (GigyaApiResult<T>) -> Swift.Void) where T : GigyaAccountProtocol
+  func callNativeSocialLogin<T>(params: [Swift.String : Any], completion: @escaping (GigyaApiResult<T>?) -> Swift.Void) where T : GigyaAccountProtocol
+  func callGetAccount<T>(completion: @escaping (GigyaApiResult<T>) -> Swift.Void) where T : GigyaAccountProtocol
+  func callGetAccount<T>(dataType: T.Type, params: [Swift.String : Any], completion: @escaping (GigyaApiResult<T>) -> Swift.Void) where T : GigyaAccountProtocol
+  func callGetAccount<T>(dataType: T.Type, params: [Swift.String : Any], clearAccount: Swift.Bool, completion: @escaping (GigyaApiResult<T>) -> Swift.Void) where T : GigyaAccountProtocol
+  func callSociallogin<T>(provider: GigyaSocialProviders, viewController: UIKit.UIViewController, params: [Swift.String : Any], dataType: T.Type, completion: @escaping (GigyaLoginResult<T>) -> Swift.Void) where T : GigyaAccountProtocol
+  func callLogin<T>(dataType: T.Type, loginId: Swift.String, password: Swift.String, params: [Swift.String : Any], completion: @escaping (GigyaLoginResult<T>) -> Swift.Void) where T : GigyaAccountProtocol
+  func callfinalizeRegistration<T>(regToken: Swift.String, completion: @escaping (GigyaLoginResult<T>) -> Swift.Void) where T : GigyaAccountProtocol
+  func callRegister<T>(dataType: T.Type, email: Swift.String, password: Swift.String, params: [Swift.String : Any], completion: @escaping (GigyaLoginResult<T>) -> Swift.Void) where T : GigyaAccountProtocol
+  func callLogout(completion: @escaping (GigyaApiResult<GigyaDictionary>) -> Swift.Void)
+  func callForgotPassword(params: [Swift.String : Any], completion: @escaping (GigyaApiResult<GigyaDictionary>) -> Swift.Void)
+  func callInterruptionResolver<T>(dataType: T.Type, error: NetworkError, completion: @escaping (GigyaLoginResult<T>) -> Swift.Void) where T : GigyaAccountProtocol
+}
+@_hasMissingDesignatedInitializers final public class Gigya {
+  public static func getContainer() -> IOCContainer
+  @discardableResult
+  public static func sharedInstance() -> GigyaCore<GigyaAccount>
+  @discardableResult
+  public static func sharedInstance<T>(_ dataType: T.Type) -> GigyaCore<T> where T : GigyaAccountProtocol
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class GigyaLogger {
+  public static func setDebugMode(to debugModeEnabled: Swift.Bool)
+  public static func error(with clazz: Swift.AnyClass, message: Swift.String, generic: Any? = nil) -> Swift.Never
+  public static func log(with clazz: Any?, message: Swift.String)
+  @objc deinit
+}
+public struct GigyaDefinitions {
+  public struct API {
+    public static let getSdkConfig: Swift.String
+    public static let login: Swift.String
+    public static let logout: Swift.String
+    public static let getAccountInfo: Swift.String
+    public static let setAccountInfo: Swift.String
+    public static let resetPassword: Swift.String
+    public static let refreshProviderSession: Swift.String
+    public static let initRegistration: Swift.String
+    public static let register: Swift.String
+    public static let finalizeRegistration: Swift.String
+    public static let getConflictingAccount: Swift.String
+    public static let notifyLogin: Swift.String
+    public static let verifyLogin: Swift.String
+    public static let notifySocialLogin: Swift.String
+    public static let removeConnection: Swift.String
+    public static let socialLogin: Swift.String
+    public static let accountsSocialLogin: Swift.String
+    public static let addConnection: Swift.String
+    public static let accountsAddConnection: Swift.String
+    public static let isAvailableLoginID: Swift.String
+    public static let getSchema: Swift.String
+    public static let getPolicies: Swift.String
+    public static let initTFA: Swift.String
+    public static let tfaGetProviders: Swift.String
+    public static let finalizeTFA: Swift.String
+    public static let getEmailsTFA: Swift.String
+    public static let emailSendVerificationCodeTFA: Swift.String
+    public static let emailCompleteVerificationTFA: Swift.String
+    public static let phoneCompleteVerificationTFA: Swift.String
+    public static let getRegisteredPhoneNumbersTFA: Swift.String
+    public static let sendVerificationCodeTFA: Swift.String
+    public static let totpRegisterTFA: Swift.String
+    public static let totpVerifyTFA: Swift.String
+    public static let pushUpdateDevice: Swift.String
+    public static let pushVerifyTFA: Swift.String
+    public static let pushOptinTFA: Swift.String
+    public static let pushOptinLogin: Swift.String
+    public static let pushVerifyLogin: Swift.String
+    public static let isSessionValid: Swift.String
+  }
+  public struct Tfa {
+    public static let email: Swift.String
+    public static let phone: Swift.String
+    public static let topt: Swift.String
+  }
+  public struct Plugin {
+    public static let finished: Swift.String
+    public static let canceled: Swift.String
+  }
+  public struct ErrorCode {
+    public static let invalidJwt: Swift.Int
+    public static let requestExpired: Swift.Int
+  }
+  public struct WenAuthn {
+  }
+  public struct Oauth {
+  }
+  public static var charactersAllowed: Swift.String
+  public static var charactersAllowedInSig: Swift.String
+  public static var versionPrefix: Swift.String?
+}
+public struct ConflictingAccount : Swift.Codable {
+  public let loginProviders: [Swift.String]?
+  public let loginID: Swift.String?
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers final public class PendingRegistrationResolver<T> where T : GigyaAccountProtocol {
+  final public let regToken: Swift.String
+  final public func setAccount(params: [Swift.String : Any])
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class TFAResolverFactory<A> where A : GigyaAccountProtocol {
+  public func getResolver<T>(for resolver: T.Type) -> T where T : TFAResolver<A>
+  @objc deinit
+}
+public struct SessionInfoModel : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct GigyaWebAuthnCredential : Swift.Codable {
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public enum GigyaWebAuthnCredentialType : Swift.String, Swift.Codable {
+  case crossPlatform
+  case platform
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@frozen public enum NetworkError : Swift.Error {
+  case gigyaError(data: GigyaResponseModel)
+  case providerError(data: Swift.String)
+  case networkError(error: any Swift.Error)
+  case emptyResponse
+  case jsonParsingError(error: any Swift.Error)
+  case createURLRequestFailed
+}
+public protocol BasePushManagerProtocol {
+  var idintityKey: Swift.String { get }
+}
+public enum GigyaSocialProviders {
+  case facebook
+  case google
+  case yahoo
+  case twitter
+  case line
+  case wechat
+  case amazon
+  case blogger
+  case foursquare
+  case instagram
+  case kakao
+  case linkedin
+  case livedoor
+  case messenger
+  case mixi
+  case naver
+  case netlog
+  case odnoklassniki
+  case orangeFrance
+  case paypaloauth
+  case tencentQq
+  case renren
+  case sinaWeibo
+  case spiceworks
+  case vkontakte
+  case wordpress
+  case xing
+  case yahooJapan
+  case apple
+  case web(provider: Swift.String)
+  case oidc(provider: Swift.String)
+  case sso
+  public init?(rawValue: Swift.String)
+}
+public enum GigyaNativeSocialProviders : Swift.String, Swift.CaseIterable {
+  public static var allCases: [GigyaNativeSocialProviders] {
+    get
+  }
+  case facebook
+  case google
+  case line
+  case wechat
+  case apple
+  public init?(rawValue: Swift.String)
+  public typealias AllCases = [GigyaNativeSocialProviders]
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct GigyaSchema : Swift.Codable {
+  public let profileSchema: GigyaSchema.GigyaProfileSchema?
+  public let dataSchema: GigyaSchema.GigyaDataSchema?
+  public let subscriptionsSchema: GigyaSchema.GigyaSubscriptionSchema?
+  public let preferencesSchema: GigyaSchema.GigyaPreferencesSchema?
+  public struct GigyaProfileSchema : Swift.Codable {
+    public let fields: [Swift.String : GigyaSchema.ProfileSchema]?
+    public let dynamicSchema: Swift.Bool?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct GigyaDataSchema : Swift.Codable {
+    public let fields: [Swift.String : GigyaSchema.DataSchema]?
+    public let dynamicSchema: Swift.Bool?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct GigyaSubscriptionSchema : Swift.Codable {
+    public let fields: [Swift.String : GigyaSchema.SubscriptionSchema]?
+    public let dynamicSchema: Swift.Bool?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct GigyaPreferencesSchema : Swift.Codable {
+    public let fields: [Swift.String : GigyaSchema.PreferenceSchema]?
+    public let dynamicSchema: Swift.Bool?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct DataSchema : Swift.Codable {
+    public let type: Swift.String?
+    public let writeAccess: Swift.String?
+    public let format: Swift.String?
+    public let encrypt: Swift.String?
+    public let required: Swift.Bool?
+    public let allowNull: Swift.Bool?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct PreferenceSchema : Swift.Codable {
+    public let type: Swift.String?
+    public let format: Swift.String?
+    public let required: Swift.Bool?
+    public let writeAccess: Swift.String?
+    public let currentDocVersion: Swift.Double?
+    public let minDocVersion: Swift.Double?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct SubscriptionSchema : Swift.Codable {
+    public let type: Swift.String?
+    public let description: Swift.String?
+    public let required: Swift.Bool?
+    public let doubleOptIn: Swift.Bool?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public struct ProfileSchema : Swift.Codable {
+    public let type: Swift.String?
+    public let writeAccess: Swift.String?
+    public let format: Swift.String?
+    public let encrypt: Swift.String?
+    public let required: Swift.Bool?
+    public let allowNull: Swift.Bool?
+    public func encode(to encoder: any Swift.Encoder) throws
+    public init(from decoder: any Swift.Decoder) throws
+  }
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+public typealias GigyaResponseHandler = (Foundation.NSData?, (any Swift.Error)?) -> Swift.Void
+public protocol NetworkAdapterProtocol {
+  func send(model: ApiRequestModel, blocking: Swift.Bool, completion: @escaping GigyaResponseHandler)
+}
+public protocol SessionServiceProtocol {
+  var session: GigyaSession? { get set }
+  func isValidSession() -> Swift.Bool
+  func setSession(_ model: SessionInfoModel?)
+  func getSession(completion: @escaping ((Swift.Bool) -> Swift.Void))
+  func setSessionAs(biometric: Swift.Bool, completion: @escaping (GigyaBiometricResult) -> Swift.Void)
+  var handlersAfterSetSession: InterceptorsUtils { get }
+  func clear()
+  func clear(completion: @escaping () -> Swift.Void)
+  func clearSession()
+  func setClearCookies(to value: Swift.Bool)
+}
+@objc public protocol ProviderWrapperProtocol {
+  @objc init()
+  @objc var clientID: Swift.String? { get set }
+  @objc func login(params: [Swift.String : Any]?, viewController: UIKit.UIViewController?, completion: @escaping (_ jsonData: [Swift.String : Any]?, _ error: Swift.String?) -> Swift.Void)
+  @objc optional func logout()
+}
+@_hasMissingDesignatedInitializers final public class GigyaCore<T> : GigyaInstanceProtocol where T : GigyaAccountProtocol {
+  final public let config: GigyaConfig
+  final public let biometric: any BiometricServiceProtocol
+  final public let webAuthn: WebAuthnService<T>
+  final public func initFor(apiKey: Swift.String, apiDomain: Swift.String? = nil, cname: Swift.String? = nil)
+  final public func send(api: Swift.String, params: [Swift.String : Any] = [:], completion: @escaping (GigyaApiResult<GigyaDictionary>) -> Swift.Void)
+  final public func send<B>(dataType: B.Type, api: Swift.String, params: [Swift.String : Any] = [:], completion: @escaping (GigyaApiResult<B>) -> Swift.Void) where B : Swift.Decodable, B : Swift.Encodable
+  final public func isLoggedIn() -> Swift.Bool
+  final public func setSession(_ session: GigyaSession)
+  final public func getSession() -> GigyaSession?
+  final public func setClearCookies(to value: Swift.Bool)
+  final public func setRequestTimeout(to sec: Swift.Double)
+  final public func logout(completion: @escaping (GigyaApiResult<GigyaDictionary>) -> Swift.Void)
+  final public func logout()
+  final public func login(loginId: Swift.String, password: Swift.String, params: [Swift.String : Any] = [:], completion: @escaping (GigyaLoginResult<T>) -> Swift.Void)
+  final public func login(params: [Swift.String : Any] = [:], completion: @escaping (GigyaLoginResult<T>) -> Swift.Void)
+  final public func login(with provider: GigyaSocialProviders, viewController: UIKit.UIViewController, params: [Swift.String : Any] = [:], completion: @escaping (GigyaLoginResult<T>) -> Swift.Void)
+  @available(iOS 13.0, *)
+  final public func sso(viewController: UIKit.UIViewController, params: [Swift.String : Any] = [:], completion: @escaping (GigyaLoginResult<T>) -> Swift.Void)
+  final public func isAvailable(loginId: Swift.String, completion: @escaping (GigyaApiResult<Swift.Bool>) -> Swift.Void)
+  final public func verifyLogin(UID: Swift.String, params: [Swift.String : Any] = [:], completion: @escaping (GigyaApiResult<T>) -> Swift.Void)
+  final public func register(email: Swift.String, password: Swift.String, params: [Swift.String : Any] = [:], completion: @escaping (GigyaLoginResult<T>) -> Swift.Void)
+  final public func getAccount(_ clearAccount: Swift.Bool = false, params: [Swift.String : Any] = [:], completion: @escaping (GigyaApiResult<T>) -> Swift.Void)
+  final public func setAccount(with account: T, completion: @escaping (GigyaApiResult<T>) -> Swift.Void)
+  final public func setAccount(with params: [Swift.String : Any], completion: @escaping (GigyaApiResult<T>) -> Swift.Void)
+  final public func forgotPassword(loginId: Swift.String, completion: @escaping (GigyaApiResult<GigyaDictionary>) -> Swift.Void)
+  final public func forgotPassword(params: [Swift.String : Any], completion: @escaping (GigyaApiResult<GigyaDictionary>) -> Swift.Void)
+  final public func notifySocialLogin(params: [Swift.String : Any], completion: @escaping (GigyaApiResult<T>) -> Swift.Void)
+  final public func socialLoginWith(providers: [GigyaSocialProviders], viewController: UIKit.UIViewController, params: [Swift.String : Any], completion: @escaping (GigyaLoginResult<T>) -> Swift.Void)
+  final public func addConnection(provider: GigyaSocialProviders, viewController: UIKit.UIViewController, params: [Swift.String : Any] = [:], completion: @escaping (GigyaApiResult<T>) -> Swift.Void)
+  final public func removeConnection(provider: GigyaSocialProviders, completion: @escaping (GigyaApiResult<GigyaDictionary>) -> Swift.Void)
+  final public func getSchema(params: [Swift.String : Any] = [:], completion: @escaping (GigyaApiResult<GigyaSchema>) -> Swift.Void)
+  final public func verifySession(params: [Swift.String : Any] = [:], completion: @escaping (GigyaApiResult<GigyaDictionary>) -> Swift.Void)
+  final public func showScreenSet(with name: Swift.String, viewController: UIKit.UIViewController, params: [Swift.String : Any] = [:], completion: @escaping (GigyaPluginEvent<T>) -> Swift.Void)
+  final public var interruptionsEnabled: Swift.Bool {
+    get
+  }
+  final public func handleInterruptions(sdkHandles: Swift.Bool)
+  final public func createWebBridge() -> GigyaWebBridge<T>
+  @available(iOS 10.0, *)
+  final public func receivePush(userInfo: [Swift.AnyHashable : Any], completion: @escaping (UIKit.UIBackgroundFetchResult) -> Swift.Void)
+  final public func foregroundNotification(with data: [Swift.AnyHashable : Any])
+  @available(iOS 10.0, *)
+  final public func updatePushToken(key: Swift.String)
+  final public func verifyPush(with response: UserNotifications.UNNotificationResponse)
+  final public func registerSocialProvider(of provider: GigyaNativeSocialProviders, wrapper: any ProviderWrapperProtocol)
+  final public func setErrorReporting(to active: Swift.Bool)
+  final public func setAccountConfig(with account: GigyaAccountConfig)
+  @objc deinit
+}
+@available(iOS 13.0.0, *)
+extension GigyaCore {
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func send(api: Swift.String, params: [Swift.String : Any] = [:]) async throws -> GigyaDictionary
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func send<B>(dataType: B.Type, api: Swift.String, params: [Swift.String : Any] = [:]) async throws -> B where B : Swift.Decodable, B : Swift.Encodable
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func logout() async throws -> GigyaDictionary
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func getAccount(_ clearAccount: Swift.Bool = false, params: [Swift.String : Any] = [:]) async throws -> T
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func setAccount(with account: T) async throws -> T
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func setAccount(with params: [Swift.String : Any]) async throws -> T
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func forgotPassword(loginId: Swift.String) async throws -> GigyaDictionary
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func forgotPassword(params: [Swift.String : Any]) async throws -> GigyaDictionary
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func notifySocialLogin(params: [Swift.String : Any]) async throws -> T
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  final public func getSchema(params: [Swift.String : Any] = [:]) async throws -> GigyaSchema
+  #endif
+}
+extension GigyaBiometricResult : Swift.Equatable {}
+extension GigyaBiometricResult : Swift.Hashable {}
+extension GigyaBiometricResult : Swift.Sendable {}
+extension PushNotificationModes : Swift.Equatable {}
+extension PushNotificationModes : Swift.Hashable {}
+extension PushNotificationModes : Swift.RawRepresentable {}
+extension PushNotificationModes : Swift.Sendable {}
+extension ApiStatusCode : Swift.Equatable {}
+extension ApiStatusCode : Swift.Hashable {}
+extension ApiStatusCode : Swift.RawRepresentable {}
+extension Interruption : Swift.Equatable {}
+extension Interruption : Swift.Hashable {}
+extension Interruption : Swift.RawRepresentable {}
+extension TFAMode : Swift.Equatable {}
+extension TFAMode : Swift.Hashable {}
+extension TFAMode : Swift.RawRepresentable {}
+extension TFAPhoneMethod : Swift.Equatable {}
+extension TFAPhoneMethod : Swift.Hashable {}
+extension TFAPhoneMethod : Swift.RawRepresentable {}
+extension TFAProvider : Swift.Equatable {}
+extension TFAProvider : Swift.Hashable {}
+extension TFAProvider : Swift.RawRepresentable {}
+extension TFAProvider : Swift.Sendable {}
+extension GigyaWebAuthnCredentialType : Swift.Equatable {}
+extension GigyaWebAuthnCredentialType : Swift.Hashable {}
+extension GigyaWebAuthnCredentialType : Swift.RawRepresentable {}
+extension GigyaNativeSocialProviders : Swift.Equatable {}
+extension GigyaNativeSocialProviders : Swift.Hashable {}
+extension GigyaNativeSocialProviders : Swift.RawRepresentable {}

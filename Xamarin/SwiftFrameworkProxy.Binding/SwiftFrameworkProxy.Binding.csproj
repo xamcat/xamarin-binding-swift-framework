@@ -47,11 +47,11 @@
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
   </ItemGroup>
   <ItemGroup>
-    <NativeReference Include="..\..\Swift\VendorFrameworks\gigya-swift-sdk\Gigya.framework">
+    <NativeReference Include="..\..\Swift\VendorFrameworks\gigya-swift-sdk\Gigya.xcframework">
       <Kind>Framework</Kind>
       <Frameworks>Foundation UIKit</Frameworks>
     </NativeReference>
-    <NativeReference Include="..\..\Swift\VendorFrameworks\swift-framework-proxy\SwiftFrameworkProxy.framework">
+    <NativeReference Include="..\..\Swift\VendorFrameworks\swift-framework-proxy\SwiftFrameworkProxy.xcframework">
       <Kind>Framework</Kind>
       <Frameworks>Foundation UIKit</Frameworks>
     </NativeReference>
